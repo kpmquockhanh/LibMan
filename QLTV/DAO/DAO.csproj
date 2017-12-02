@@ -41,12 +41,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
-    <Compile Include="DAL_Book.cs" />
     <Compile Include="DAO_Author.cs" />
     <Compile Include="DAO_Book.cs" />
     <Compile Include="DAO_Category.cs" />
     <Compile Include="DAO_Publisher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{1ecddfe1-6d43-49f1-970a-15d1c5911295}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

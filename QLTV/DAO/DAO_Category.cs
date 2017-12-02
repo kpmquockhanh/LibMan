@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    class DAO_Category
+    public class DAO_Category
     {
-        private int category_id;
-        private String category_name;
 
-        public int Category_id { get => category_id; set => category_id = value; }
-        public string Category_name { get => category_name; set => category_name = value; }
     }
 }
