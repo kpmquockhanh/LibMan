@@ -21,6 +21,7 @@ namespace DAO
             dataAdapter = new SqlDataAdapter(sql, connection);
             dataAdapter.Fill(dt);
             connection.Close();
+
             return dt;
         }
 
