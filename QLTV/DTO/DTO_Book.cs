@@ -13,7 +13,7 @@ namespace DTO
         private int author_id;
         private int publisher_id;
 
-        public DateTime Bublication_date { get => b_publication_date; set => b_publication_date = value; }
+        public DateTime Publication_date { get => b_publication_date; set => b_publication_date = value; }
         public double Price { get => b_price; set => b_price = value; }
         public int Quantity { get => b_quantity; set => b_quantity = value; }
         public int Category_id { get => category_id; set => category_id = value; }

@@ -12,14 +12,14 @@ namespace DAO
         public int Insert(DTO_Book book)
         {
             string sql = "INSERT INTO Book(b_id, b_name, b_publication_date, b_price, b_quanity, category_id, author_id, publisher_id)"
-                + " VALUES('" + book.ID + "', '" + book.Name + "','" + book.Bublication_date.ToShortDateString() + "', " + book.Price + ", "
+                + " VALUES('" + book.ID + "', '" + book.Name + "','" + book.Publication_date.ToShortDateString() + "', " + book.Price + ", "
                 + book.Quantity + ", '" + book.Category_id + "', '" + book.Author_id + "', '" + book.Publisher_id + "');";
             return this.ExecuteNonQuery(sql);
         }
 
         public int Update(DTO_Book book)
         {
-            string sql = "UPDATE Book SET b_name = '" + book.Name + "', b_publication_date = '" + book.Bublication_date + "', b_price = " + book.Price
+            string sql = "UPDATE Book SET b_name = '" + book.Name + "', b_publication_date = '" + book.Publication_date + "', b_price = " + book.Price
                  + ", b_quanity = " + book.Quantity + ", category_id = '" + book.Category_id + "', author_id = '" + book.Author_id + "', publisher_id = '"
                  + book.Publisher_id + "' WHERE b_id = '" + book.ID + "';";
             return this.ExecuteNonQuery(sql);

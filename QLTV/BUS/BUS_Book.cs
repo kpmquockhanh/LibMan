@@ -2,26 +2,22 @@
 using DAO;
 using DTO;
 using System.Data;
-
-
 namespace BUS
 {
-    public class BUS_Book
+    public class BUS_Book:DAO_Book
     {
-        //Trong này chỉ xử lí dữ liệu từ form thôi rồi đưa vào DAO
-        DAO_Book dataBook = new DAO_Book();
-        DataTable dataTable = new DataTable();
+        DAO_Book bookDAO = new DAO_Book();
+        public int InsertBook(DTO_Book book)
+        {
+            //Xử lí dữ liệu trước
+
+
+
+            //Dùng DAO class
+            return bookDAO.Insert(book);
+
+        }
         
-        public DataTable LoadDataGridViewBook()
-        {
-            return dataTable =  dataBook.GetAllDataTable();
-        }
-
-        public int InsertBook(String name, String publicaionDate, String price, String quanity, String category, String author, String publisher)
-        {
-
-            return 0;
-        }
         
     }
 }
