@@ -55,10 +55,6 @@
       <Project>{1ecddfe1-6d43-49f1-970a-15d1c5911295}</Project>
       <Name>DTO</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GUI\GUI.csproj">
-      <Project>{6a6ac432-80f9-45d7-a3f3-c83ea910a485}</Project>
-      <Name>GUI</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

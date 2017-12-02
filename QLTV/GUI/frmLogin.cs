@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using DAO;
 namespace GUI
 {
     public partial class frmLogin : Form

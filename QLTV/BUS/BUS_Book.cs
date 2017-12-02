@@ -20,7 +20,7 @@ namespace BUS
         public int InsertBook(String name, String publicaionDate, String price, String quanity, String category, String author, String publisher)
         {
 
-            dataBook.Insert()
+            return 0;
         }
         
     }
