@@ -1,5 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace GUI
 {
     public partial class frmLogin : Form
@@ -11,12 +19,8 @@ namespace GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            //Connection conn = new Connection();
-            // MessageBox.Show(conn.ExecuteNonQuery("insert into test values('ahihi')").ToString());
-            frmBook book = new frmBook();
-            book.ShowDialog();
+            frmBook bk = new frmBook();
+            bk.ShowDialog();
         }
-
     }
 }

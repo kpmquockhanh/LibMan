@@ -33,7 +33,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(100, 120);
+            this.button1.Location = new System.Drawing.Point(60, 77);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -48,8 +48,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.button1);
             this.Name = "frmLogin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ima";
+            this.Text = "frmLogin";
             this.ResumeLayout(false);
 
         }
@@ -59,4 +58,3 @@
         private System.Windows.Forms.Button button1;
     }
 }
-
