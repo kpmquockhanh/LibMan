@@ -9,7 +9,7 @@ namespace DAO
         SqlCommand command;
         SqlConnection connection;
 
-        public Connection(String con = "Data Source=KPM\\KPMSERVER;Initial Catalog=QuanLyThuVien;Integrated Security=True")
+        public Connection(String con = "Data Source=DESKTOP-JLJ2TBG;Initial Catalog=QuanLyThuVien;Integrated Security=True")
         {
             //Data Source=.\\KPMSERVER;Initial Catalog=QuanLyThuVien;Integrated Security=True
             connection = new SqlConnection(con);

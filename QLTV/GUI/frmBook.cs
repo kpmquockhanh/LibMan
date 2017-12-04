@@ -13,6 +13,12 @@ namespace GUI
 {
     public partial class frmBook : Form
     {
+        BUS_Book bus_book = new BUS_Book();
+        BUS_Author bus_author = new BUS_Author();
+        BUS_Publisher bus_publisher = new BUS_Publisher();
+        BUS_Category bus_category = new BUS_Category();
+
+        DataTable dataTable;
         public frmBook()
         {
             InitializeComponent();
@@ -22,13 +28,13 @@ namespace GUI
         private void btnA_Click(object sender, EventArgs e)
         {
             DTO_Book b = new DTO_Book();
-            b.ID = int.Parse(txtID.Text);
+            b.ID = 0;
             b.Name = txtName.Text;
             b.Price = int.Parse(txtPrice.Text);
             b.Publication_date = DateTime.Parse(dpPubDate.Value.ToShortDateString());
-            b.Publisher_id = int.Parse(txtPublisher.Text);
-            b.Author_id = int.Parse(txtAuthor.Text);
-            b.Category_id = int.Parse(txtCate.Text);
+            b.Publisher_id = int.Parse(cbxPublisher.Text);
+            b.Author_id = int.Parse(cbxAuthor.Text);
+            b.Category_id = int.Parse(cbxCategory.Text);
             b.Quantity = int.Parse(txtQuanity.Text);
             if (bookBUS.InsertBook(b)==1)
             {
@@ -38,5 +44,72 @@ namespace GUI
                 MessageBox.Show("Không thành công");
 
         }
+
+        private void frmBook_Load(object sender, EventArgs e)
+        {
+         
+            // Load DataGridView
+            dataTable = new DataTable();
+            dataTable = bus_book.LoadDataGridViewBook();
+            dgvBook.DataSource = dataTable;
+
+            // Load ComboxCategory
+            dataTable = new DataTable();
+            dataTable = bus_category.LoadDataGridViewCategory();
+            cbxCategory.DataSource = dataTable;
+            cbxCategory.DisplayMember = "category_id";
+
+            // Load ComboxAuthor
+            dataTable = new DataTable();
+            dataTable = bus_author.LoadDataGridViewAuthor();
+            cbxAuthor.DataSource = dataTable;
+            cbxAuthor.DisplayMember = "author_id";
+
+            // Load ComboxPublisher
+            dataTable = new DataTable();
+            dataTable = bus_publisher.LoadDataGridViewPublisher();
+            cbxPublisher.DataSource = dataTable;
+            cbxPublisher.DisplayMember = "publisher_id";
+        }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {}
+
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("Hãy nhập số!");
+            }
+        }
+
+        private void txtQuanity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtQuanity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("Hãy nhập số!");
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hãy nhập mã sách bạn cần sửa");
+
+            
+        }
+
+        private void dgvBook_SelectionChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("Alo");
+        }
+
+
     }
 }

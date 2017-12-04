@@ -44,19 +44,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtQuanity = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtCate = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtAuthor = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtPublisher = new System.Windows.Forms.TextBox();
             this.dpPubDate = new System.Windows.Forms.DateTimePicker();
+            this.cbxCategory = new System.Windows.Forms.ComboBox();
+            this.cbxAuthor = new System.Windows.Forms.ComboBox();
+            this.cbxPublisher = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).BeginInit();
             this.SuspendLayout();
             // 
             // btnA
             // 
             this.btnA.Location = new System.Drawing.Point(40, 521);
-            this.btnA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnA.Margin = new System.Windows.Forms.Padding(4);
             this.btnA.Name = "btnA";
             this.btnA.Size = new System.Drawing.Size(159, 60);
             this.btnA.TabIndex = 0;
@@ -67,17 +67,18 @@
             // btnEdit
             // 
             this.btnEdit.Location = new System.Drawing.Point(207, 521);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(159, 60);
             this.btnEdit.TabIndex = 0;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnD
             // 
             this.btnD.Location = new System.Drawing.Point(374, 521);
-            this.btnD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnD.Margin = new System.Windows.Forms.Padding(4);
             this.btnD.Name = "btnD";
             this.btnD.Size = new System.Drawing.Size(159, 60);
             this.btnD.TabIndex = 0;
@@ -87,7 +88,7 @@
             // btnR
             // 
             this.btnR.Location = new System.Drawing.Point(541, 521);
-            this.btnR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnR.Margin = new System.Windows.Forms.Padding(4);
             this.btnR.Name = "btnR";
             this.btnR.Size = new System.Drawing.Size(159, 60);
             this.btnR.TabIndex = 0;
@@ -97,7 +98,7 @@
             // btnE
             // 
             this.btnE.Location = new System.Drawing.Point(708, 521);
-            this.btnE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnE.Margin = new System.Windows.Forms.Padding(4);
             this.btnE.Name = "btnE";
             this.btnE.Size = new System.Drawing.Size(159, 60);
             this.btnE.TabIndex = 0;
@@ -110,11 +111,12 @@
             this.dgvBook.AllowUserToDeleteRows = false;
             this.dgvBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBook.Location = new System.Drawing.Point(13, 240);
-            this.dgvBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvBook.Margin = new System.Windows.Forms.Padding(4);
             this.dgvBook.Name = "dgvBook";
             this.dgvBook.ReadOnly = true;
             this.dgvBook.Size = new System.Drawing.Size(881, 273);
             this.dgvBook.TabIndex = 1;
+            this.dgvBook.SelectionChanged += new System.EventHandler(this.dgvBook_SelectionChanged);
             // 
             // label1
             // 
@@ -131,7 +133,7 @@
             // 
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtID.Location = new System.Drawing.Point(173, 85);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(271, 26);
             this.txtID.TabIndex = 3;
@@ -151,7 +153,7 @@
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtName.Location = new System.Drawing.Point(173, 117);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(271, 26);
             this.txtName.TabIndex = 3;
@@ -182,10 +184,12 @@
             // 
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtPrice.Location = new System.Drawing.Point(173, 181);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(271, 26);
             this.txtPrice.TabIndex = 3;
+            this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // label5
             // 
@@ -202,10 +206,12 @@
             // 
             this.txtQuanity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtQuanity.Location = new System.Drawing.Point(545, 86);
-            this.txtQuanity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQuanity.Margin = new System.Windows.Forms.Padding(4);
             this.txtQuanity.Name = "txtQuanity";
             this.txtQuanity.Size = new System.Drawing.Size(240, 26);
             this.txtQuanity.TabIndex = 3;
+            this.txtQuanity.TextChanged += new System.EventHandler(this.txtQuanity_TextChanged);
+            this.txtQuanity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuanity_KeyPress);
             // 
             // label6
             // 
@@ -218,15 +224,6 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "Category";
             // 
-            // txtCate
-            // 
-            this.txtCate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCate.Location = new System.Drawing.Point(545, 118);
-            this.txtCate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtCate.Name = "txtCate";
-            this.txtCate.Size = new System.Drawing.Size(240, 26);
-            this.txtCate.TabIndex = 3;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -237,15 +234,6 @@
             this.label7.Size = new System.Drawing.Size(57, 20);
             this.label7.TabIndex = 2;
             this.label7.Text = "Author";
-            // 
-            // txtAuthor
-            // 
-            this.txtAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtAuthor.Location = new System.Drawing.Point(545, 150);
-            this.txtAuthor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(240, 26);
-            this.txtAuthor.TabIndex = 3;
             // 
             // label8
             // 
@@ -258,15 +246,6 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "Publisher";
             // 
-            // txtPublisher
-            // 
-            this.txtPublisher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtPublisher.Location = new System.Drawing.Point(545, 182);
-            this.txtPublisher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtPublisher.Name = "txtPublisher";
-            this.txtPublisher.Size = new System.Drawing.Size(240, 26);
-            this.txtPublisher.TabIndex = 3;
-            // 
             // dpPubDate
             // 
             this.dpPubDate.Location = new System.Drawing.Point(173, 152);
@@ -274,20 +253,44 @@
             this.dpPubDate.Size = new System.Drawing.Size(271, 23);
             this.dpPubDate.TabIndex = 4;
             // 
+            // cbxCategory
+            // 
+            this.cbxCategory.FormattingEnabled = true;
+            this.cbxCategory.Location = new System.Drawing.Point(545, 121);
+            this.cbxCategory.Name = "cbxCategory";
+            this.cbxCategory.Size = new System.Drawing.Size(240, 24);
+            this.cbxCategory.TabIndex = 5;
+            // 
+            // cbxAuthor
+            // 
+            this.cbxAuthor.FormattingEnabled = true;
+            this.cbxAuthor.Location = new System.Drawing.Point(545, 154);
+            this.cbxAuthor.Name = "cbxAuthor";
+            this.cbxAuthor.Size = new System.Drawing.Size(240, 24);
+            this.cbxAuthor.TabIndex = 5;
+            // 
+            // cbxPublisher
+            // 
+            this.cbxPublisher.FormattingEnabled = true;
+            this.cbxPublisher.Location = new System.Drawing.Point(545, 185);
+            this.cbxPublisher.Name = "cbxPublisher";
+            this.cbxPublisher.Size = new System.Drawing.Size(240, 24);
+            this.cbxPublisher.TabIndex = 5;
+            // 
             // frmBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(907, 610);
+            this.ClientSize = new System.Drawing.Size(907, 559);
+            this.Controls.Add(this.cbxPublisher);
+            this.Controls.Add(this.cbxAuthor);
+            this.Controls.Add(this.cbxCategory);
             this.Controls.Add(this.dpPubDate);
-            this.Controls.Add(this.txtPublisher);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtAuthor);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCate);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtQuanity);
@@ -302,9 +305,10 @@
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnA);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmBook";
             this.Text = "frmBook";
+            this.Load += new System.EventHandler(this.frmBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -329,11 +333,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtQuanity;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtCate;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtAuthor;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtPublisher;
         private System.Windows.Forms.DateTimePicker dpPubDate;
+        private System.Windows.Forms.ComboBox cbxCategory;
+        private System.Windows.Forms.ComboBox cbxAuthor;
+        private System.Windows.Forms.ComboBox cbxPublisher;
     }
 }
