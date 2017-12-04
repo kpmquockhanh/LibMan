@@ -7,10 +7,13 @@ namespace DAO
     {
         public int Insert(DTO_Book book)
         {
-            string sql = "INSERT INTO Book(b_name, b_publication_date, b_price, b_quanity, category_id, author_id, publisher_id)"
-                + " VALUES('" + book.Name + "','" + book.Publication_date.ToShortDateString() + "', " + book.Price + ", "
+        
+                string sql = "INSERT INTO Book(b_id, b_name, b_publication_date, b_price, b_quanity, category_id, author_id, publisher_id)"
+                + " VALUES('" + book.ID + "','" + book.Name + "','" + book.Publication_date.ToShortDateString() + "', " + book.Price + ", "
                 + book.Quantity + ", '" + book.Category_id + "', '" + book.Author_id + "', '" + book.Publisher_id + "');";
-            return this.ExecuteNonQuery(sql);
+                return this.ExecuteNonQuery(sql);
+           
+            
         }
 
         public int Update(DTO_Book book)

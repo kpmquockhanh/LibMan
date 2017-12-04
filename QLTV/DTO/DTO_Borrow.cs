@@ -22,8 +22,8 @@ namespace DTO
         public DateTime ReturnDate { get => return_date; set => return_date = value; }
         public int Quanity { get => _quanity; set => _quanity = value; }
         public double Deposit { get => _deposit; set => _deposit = value; }
-        public int B_id { get => b_id; set => b_id = value; }
-        public int R_id { get => r_id; set => r_id = value; }
-        public int S_id { get => s_id; set => s_id = value; }
+        public int BookID { get => b_id; set => b_id = value; }
+        public int ReaderID { get => r_id; set => r_id = value; }
+        public int StaffID { get => s_id; set => s_id = value; }
     }
 }

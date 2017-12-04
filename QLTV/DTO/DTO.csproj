@@ -43,8 +43,11 @@
     <Compile Include="DTO_Author.cs" />
     <Compile Include="DTO_Book.cs" />
     <Compile Include="DTO_Borrow.cs" />
+    <Compile Include="DTO_Card.cs" />
     <Compile Include="DTO_Category.cs" />
     <Compile Include="DTO_Publisher.cs" />
+    <Compile Include="DTO_Reader.cs" />
+    <Compile Include="DTO_Staff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
