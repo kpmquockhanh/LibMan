@@ -248,7 +248,7 @@ namespace GUI
                 }
                 else
                 {
-                    MessageBox.Show("Không tìm thấy!")
+                    MessageBox.Show("Không tìm thấy!");
                 }
             }
             else
