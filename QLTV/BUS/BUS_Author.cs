@@ -10,13 +10,6 @@ namespace BUS
 {
     public class BUS_Author
     {
-        DAO_Author dataAuthor = new DAO_Author();
-        DataTable dataTable = new DataTable();
-
-        public DataTable LoadDataGridViewAuthor()
-        {
-            return dataTable = dataAuthor.GetAllDataTable();
-        }
 
     }
 }

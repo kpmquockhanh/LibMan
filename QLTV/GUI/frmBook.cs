@@ -51,8 +51,11 @@ namespace GUI
 
         private void dgvBook_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show(e.RowIndex.ToString());
-            //dgvBook.Rows[e.RowIndex].Selected = true;
+            //MessageBox.Show(e.RowIndex.ToString());
+            if (e.RowIndex>-1)
+                dgvBook.Rows[e.RowIndex].Selected = true;
+
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -67,7 +70,9 @@ namespace GUI
             MessageBox.Show(SB.textBox1.Text);
         }
 
-
-       
+        private void frmBook_Load(object sender, EventArgs e)
+        {
+            dgvBook.DataSource = bookBUS.getAllDataTable();
+        }
     }
 }
