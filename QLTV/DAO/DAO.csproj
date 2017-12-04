@@ -43,8 +43,10 @@
     <Compile Include="Connection.cs" />
     <Compile Include="DAO_Author.cs" />
     <Compile Include="DAO_Book.cs" />
+    <Compile Include="DAO_Card.cs" />
     <Compile Include="DAO_Category.cs" />
     <Compile Include="DAO_Publisher.cs" />
+    <Compile Include="DAO_Staff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
