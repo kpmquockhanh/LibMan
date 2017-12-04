@@ -29,7 +29,7 @@ namespace DAO
             String sql = "DELETE Book WHERE b_id = " + b_id + ";";
             return this.ExecuteNonQuery(sql);
         }
-
+        
         public DataTable GetAllDataTable()
         {
             return this.getTable("Select * from Book");
