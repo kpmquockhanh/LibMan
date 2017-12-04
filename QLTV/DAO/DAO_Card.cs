@@ -12,7 +12,7 @@ namespace DAO
         public int Insert(DTO_Card card)
         {
 
-            string sql = "INSERT INTO Card(c_id,r_id,expired_date) VALUES('2','1','2/1/2015')";
+            string sql = "INSERT INTO Card(c_id,r_id,expired_date) VALUES('"+card.ID+"','"+card.ReaderID+"','"+card.Expired_date+"')";
             return this.ExecuteNonQuery(sql);
 
         }
