@@ -34,6 +34,14 @@
             this.btnR = new System.Windows.Forms.Button();
             this.btnE = new System.Windows.Forms.Button();
             this.dgvBook = new System.Windows.Forms.DataGridView();
+            this.b_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.b_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.b_publication_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.b_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.b_quanity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.category_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.author_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.publisher_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,6 +58,7 @@
             this.cbxCategory = new System.Windows.Forms.ComboBox();
             this.cbxAuthor = new System.Windows.Forms.ComboBox();
             this.cbxPublisher = new System.Windows.Forms.ComboBox();
+            this.btnSeach = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,6 +93,7 @@
             this.btnD.TabIndex = 0;
             this.btnD.Text = "Xóa";
             this.btnD.UseVisualStyleBackColor = true;
+            this.btnD.Click += new System.EventHandler(this.btnD_Click);
             // 
             // btnR
             // 
@@ -94,6 +104,7 @@
             this.btnR.TabIndex = 0;
             this.btnR.Text = "Reset";
             this.btnR.UseVisualStyleBackColor = true;
+            this.btnR.Click += new System.EventHandler(this.btnR_Click);
             // 
             // btnE
             // 
@@ -104,19 +115,88 @@
             this.btnE.TabIndex = 0;
             this.btnE.Text = "Thoát";
             this.btnE.UseVisualStyleBackColor = true;
+            this.btnE.Click += new System.EventHandler(this.btnE_Click);
             // 
             // dgvBook
             // 
             this.dgvBook.AllowUserToAddRows = false;
             this.dgvBook.AllowUserToDeleteRows = false;
+            this.dgvBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.b_id,
+            this.b_name,
+            this.b_publication_date,
+            this.b_price,
+            this.b_quanity,
+            this.category_id,
+            this.author_id,
+            this.publisher_id});
             this.dgvBook.Location = new System.Drawing.Point(13, 240);
             this.dgvBook.Margin = new System.Windows.Forms.Padding(4);
             this.dgvBook.Name = "dgvBook";
             this.dgvBook.ReadOnly = true;
-            this.dgvBook.Size = new System.Drawing.Size(881, 273);
+            this.dgvBook.Size = new System.Drawing.Size(923, 273);
             this.dgvBook.TabIndex = 1;
+            this.dgvBook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBook_CellClick);
+            this.dgvBook.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvBook_CellMouseClick);
             this.dgvBook.SelectionChanged += new System.EventHandler(this.dgvBook_SelectionChanged);
+            // 
+            // b_id
+            // 
+            this.b_id.DataPropertyName = "b_id";
+            this.b_id.HeaderText = "Mã sách";
+            this.b_id.Name = "b_id";
+            this.b_id.ReadOnly = true;
+            // 
+            // b_name
+            // 
+            this.b_name.DataPropertyName = "b_name";
+            this.b_name.HeaderText = "Tên sách";
+            this.b_name.Name = "b_name";
+            this.b_name.ReadOnly = true;
+            // 
+            // b_publication_date
+            // 
+            this.b_publication_date.DataPropertyName = "b_publication_date";
+            this.b_publication_date.HeaderText = "Ngày xuất bản";
+            this.b_publication_date.Name = "b_publication_date";
+            this.b_publication_date.ReadOnly = true;
+            // 
+            // b_price
+            // 
+            this.b_price.DataPropertyName = "b_price";
+            this.b_price.HeaderText = "Gía";
+            this.b_price.Name = "b_price";
+            this.b_price.ReadOnly = true;
+            // 
+            // b_quanity
+            // 
+            this.b_quanity.DataPropertyName = "b_quanity";
+            this.b_quanity.HeaderText = "Số lượng";
+            this.b_quanity.Name = "b_quanity";
+            this.b_quanity.ReadOnly = true;
+            // 
+            // category_id
+            // 
+            this.category_id.DataPropertyName = "category_id";
+            this.category_id.HeaderText = "Loại sách";
+            this.category_id.Name = "category_id";
+            this.category_id.ReadOnly = true;
+            // 
+            // author_id
+            // 
+            this.author_id.DataPropertyName = "author_id";
+            this.author_id.HeaderText = "Tác giả";
+            this.author_id.Name = "author_id";
+            this.author_id.ReadOnly = true;
+            // 
+            // publisher_id
+            // 
+            this.publisher_id.DataPropertyName = "publisher_id";
+            this.publisher_id.HeaderText = "Nhà xuất bản";
+            this.publisher_id.Name = "publisher_id";
+            this.publisher_id.ReadOnly = true;
             // 
             // label1
             // 
@@ -137,6 +217,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(271, 26);
             this.txtID.TabIndex = 3;
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
             // label2
             // 
@@ -277,11 +358,22 @@
             this.cbxPublisher.Size = new System.Drawing.Size(240, 24);
             this.cbxPublisher.TabIndex = 5;
             // 
+            // btnSeach
+            // 
+            this.btnSeach.Location = new System.Drawing.Point(190, 30);
+            this.btnSeach.Name = "btnSeach";
+            this.btnSeach.Size = new System.Drawing.Size(92, 48);
+            this.btnSeach.TabIndex = 6;
+            this.btnSeach.Text = "Seach";
+            this.btnSeach.UseVisualStyleBackColor = true;
+            this.btnSeach.Click += new System.EventHandler(this.btnSeach_Click);
+            // 
             // frmBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(907, 559);
+            this.ClientSize = new System.Drawing.Size(1000, 559);
+            this.Controls.Add(this.btnSeach);
             this.Controls.Add(this.cbxPublisher);
             this.Controls.Add(this.cbxAuthor);
             this.Controls.Add(this.cbxCategory);
@@ -339,5 +431,14 @@
         private System.Windows.Forms.ComboBox cbxCategory;
         private System.Windows.Forms.ComboBox cbxAuthor;
         private System.Windows.Forms.ComboBox cbxPublisher;
+        private System.Windows.Forms.DataGridViewTextBoxColumn b_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn b_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn b_publication_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn b_price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn b_quanity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn category_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn author_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn publisher_id;
+        private System.Windows.Forms.Button btnSeach;
     }
 }
