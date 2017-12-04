@@ -26,9 +26,9 @@ namespace GUI
             b.Name = txtName.Text;
             b.Price = int.Parse(txtPrice.Text);
             b.Publication_date = DateTime.Parse(dpPubDate.Value.ToShortDateString());
-            b.Publisher_id = int.Parse(txtPublisher.Text);
-            b.Author_id = int.Parse(txtAuthor.Text);
-            b.Category_id = int.Parse(txtCate.Text);
+            b.Publisher_id = int.Parse(cbPub.Text);
+            b.Author_id = int.Parse(cbAuthor.Text);
+            b.Category_id = int.Parse(cbCate.Text);
             b.Quantity = int.Parse(txtQuanity.Text);
             if (bookBUS.InsertBook(b)==1)
             {
@@ -38,5 +38,36 @@ namespace GUI
                 MessageBox.Show("Không thành công");
 
         }
+
+        public void setColorDGV()
+        {
+            //dgvBook.Rows[-1].;
+        }
+
+        private void btnE_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dgvBook_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show(e.RowIndex.ToString());
+            //dgvBook.Rows[e.RowIndex].Selected = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            frmSearchBook SB = new frmSearchBook();
+            SB.ShowDialog();
+            MessageBox.Show(SB.textBox1.Text);
+        }
+
+
+       
     }
 }
