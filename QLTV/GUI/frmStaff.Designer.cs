@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmBook
+    partial class frmStaff
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvBook = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dgvStaff = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gb1 = new System.Windows.Forms.GroupBox();
             this.btnE = new System.Windows.Forms.Button();
@@ -39,67 +40,69 @@
             this.btnD = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnA = new System.Windows.Forms.Button();
-            this.cbPub = new System.Windows.Forms.ComboBox();
-            this.cbAuthor = new System.Windows.Forms.ComboBox();
-            this.cbCate = new System.Windows.Forms.ComboBox();
-            this.dpPubDate = new System.Windows.Forms.DateTimePicker();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.txtAddr = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.txtQuanity = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).BeginInit();
+            this.button2 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             this.gb1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvBook
+            // dgvStaff
             // 
-            this.dgvBook.AllowUserToAddRows = false;
-            this.dgvBook.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Tan;
-            this.dgvBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvBook.BackgroundColor = System.Drawing.Color.White;
-            this.dgvBook.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvBook.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.dgvBook.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Condensed Light", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBook.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgvBook.GridColor = System.Drawing.Color.White;
-            this.dgvBook.Location = new System.Drawing.Point(10, 368);
-            this.dgvBook.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvBook.MultiSelect = false;
-            this.dgvBook.Name = "dgvBook";
-            this.dgvBook.ReadOnly = true;
-            this.dgvBook.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvBook.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Tan;
-            this.dgvBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBook.ShowCellToolTips = false;
-            this.dgvBook.ShowEditingIcon = false;
-            this.dgvBook.Size = new System.Drawing.Size(777, 239);
-            this.dgvBook.TabIndex = 1;
-            this.dgvBook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBook_CellClick);
+            this.dgvStaff.AllowUserToAddRows = false;
+            this.dgvStaff.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Tan;
+            this.dgvStaff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvStaff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvStaff.BackgroundColor = System.Drawing.Color.White;
+            this.dgvStaff.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvStaff.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dgvStaff.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto Condensed Light", 10F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStaff.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgvStaff.EnableHeadersVisualStyles = false;
+            this.dgvStaff.GridColor = System.Drawing.Color.White;
+            this.dgvStaff.Location = new System.Drawing.Point(10, 368);
+            this.dgvStaff.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvStaff.MultiSelect = false;
+            this.dgvStaff.Name = "dgvStaff";
+            this.dgvStaff.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto Condensed Light", 10F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvStaff.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvStaff.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Tan;
+            this.dgvStaff.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvStaff.ShowCellToolTips = false;
+            this.dgvStaff.ShowEditingIcon = false;
+            this.dgvStaff.Size = new System.Drawing.Size(777, 239);
+            this.dgvStaff.TabIndex = 1;
+            this.dgvStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaff_CellClick);
             // 
             // panel1
             // 
@@ -119,18 +122,14 @@
             this.gb1.Controls.Add(this.btnD);
             this.gb1.Controls.Add(this.btnEdit);
             this.gb1.Controls.Add(this.btnA);
-            this.gb1.Controls.Add(this.cbPub);
-            this.gb1.Controls.Add(this.cbAuthor);
-            this.gb1.Controls.Add(this.cbCate);
-            this.gb1.Controls.Add(this.dpPubDate);
-            this.gb1.Controls.Add(this.txtPrice);
-            this.gb1.Controls.Add(this.label8);
+            this.gb1.Controls.Add(this.txtAddr);
             this.gb1.Controls.Add(this.label4);
-            this.gb1.Controls.Add(this.label7);
             this.gb1.Controls.Add(this.label3);
             this.gb1.Controls.Add(this.label6);
             this.gb1.Controls.Add(this.txtName);
-            this.gb1.Controls.Add(this.txtQuanity);
+            this.gb1.Controls.Add(this.txtPass);
+            this.gb1.Controls.Add(this.txtPhone);
+            this.gb1.Controls.Add(this.txtEmail);
             this.gb1.Controls.Add(this.label2);
             this.gb1.Controls.Add(this.label5);
             this.gb1.Controls.Add(this.txtID);
@@ -144,7 +143,7 @@
             this.gb1.Size = new System.Drawing.Size(777, 282);
             this.gb1.TabIndex = 6;
             this.gb1.TabStop = false;
-            this.gb1.Text = "Thông tin sách";
+            this.gb1.Text = "Thông tin nhân viên";
             // 
             // btnE
             // 
@@ -181,7 +180,7 @@
             this.btnSearch.TabIndex = 22;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSeach_Click);
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnR
             // 
@@ -255,74 +254,15 @@
             this.btnA.UseVisualStyleBackColor = false;
             this.btnA.Click += new System.EventHandler(this.btnA_Click);
             // 
-            // cbPub
+            // txtAddr
             // 
-            this.cbPub.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPub.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.cbPub.FormattingEnabled = true;
-            this.cbPub.Location = new System.Drawing.Point(438, 128);
-            this.cbPub.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.cbPub.MaxDropDownItems = 10;
-            this.cbPub.Name = "cbPub";
-            this.cbPub.Size = new System.Drawing.Size(300, 27);
-            this.cbPub.TabIndex = 21;
-            // 
-            // cbAuthor
-            // 
-            this.cbAuthor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAuthor.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.cbAuthor.FormattingEnabled = true;
-            this.cbAuthor.Location = new System.Drawing.Point(438, 98);
-            this.cbAuthor.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.cbAuthor.MaxDropDownItems = 10;
-            this.cbAuthor.Name = "cbAuthor";
-            this.cbAuthor.Size = new System.Drawing.Size(300, 27);
-            this.cbAuthor.TabIndex = 21;
-            // 
-            // cbCate
-            // 
-            this.cbCate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCate.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.cbCate.FormattingEnabled = true;
-            this.cbCate.Location = new System.Drawing.Point(438, 68);
-            this.cbCate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.cbCate.MaxDropDownItems = 10;
-            this.cbCate.Name = "cbCate";
-            this.cbCate.Size = new System.Drawing.Size(300, 27);
-            this.cbCate.Sorted = true;
-            this.cbCate.TabIndex = 21;
-            // 
-            // dpPubDate
-            // 
-            this.dpPubDate.CalendarFont = new System.Drawing.Font("Roboto Condensed Light", 12F, System.Drawing.FontStyle.Strikeout);
-            this.dpPubDate.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.dpPubDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dpPubDate.Location = new System.Drawing.Point(74, 98);
-            this.dpPubDate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.dpPubDate.Name = "dpPubDate";
-            this.dpPubDate.Size = new System.Drawing.Size(143, 27);
-            this.dpPubDate.TabIndex = 20;
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrice.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.txtPrice.Location = new System.Drawing.Point(74, 128);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(278, 27);
-            this.txtPrice.TabIndex = 14;
-            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.label8.Location = new System.Drawing.Point(367, 130);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 19);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Publisher:";
+            this.txtAddr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAddr.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.txtAddr.Location = new System.Drawing.Point(105, 128);
+            this.txtAddr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAddr.Name = "txtAddr";
+            this.txtAddr.Size = new System.Drawing.Size(245, 27);
+            this.txtAddr.TabIndex = 14;
             // 
             // label4
             // 
@@ -330,29 +270,19 @@
             this.label4.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
             this.label4.Location = new System.Drawing.Point(29, 130);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 19);
+            this.label4.Size = new System.Drawing.Size(63, 19);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Price:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.label7.Location = new System.Drawing.Point(380, 100);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 19);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Author:";
+            this.label4.Text = "Address:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.label3.Location = new System.Drawing.Point(8, 100);
+            this.label3.Location = new System.Drawing.Point(43, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 19);
+            this.label3.Size = new System.Drawing.Size(49, 19);
             this.label3.TabIndex = 8;
-            this.label3.Text = "PubDate:";
+            this.label3.Text = "Name:";
             // 
             // label6
             // 
@@ -360,30 +290,49 @@
             this.label6.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
             this.label6.Location = new System.Drawing.Point(368, 70);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 19);
+            this.label6.Size = new System.Drawing.Size(49, 19);
             this.label6.TabIndex = 9;
-            this.label6.Text = "Category:";
+            this.label6.Text = "Phone";
             // 
             // txtName
             // 
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.txtName.Location = new System.Drawing.Point(74, 68);
+            this.txtName.Location = new System.Drawing.Point(105, 98);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(278, 27);
+            this.txtName.Size = new System.Drawing.Size(245, 27);
             this.txtName.TabIndex = 17;
             // 
-            // txtQuanity
+            // txtPass
             // 
-            this.txtQuanity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtQuanity.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.txtQuanity.Location = new System.Drawing.Point(438, 38);
-            this.txtQuanity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtQuanity.Name = "txtQuanity";
-            this.txtQuanity.Size = new System.Drawing.Size(299, 27);
-            this.txtQuanity.TabIndex = 18;
-            this.txtQuanity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuanity_KeyPress);
+            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPass.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.txtPass.Location = new System.Drawing.Point(105, 68);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(245, 27);
+            this.txtPass.TabIndex = 17;
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPhone.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.txtPhone.Location = new System.Drawing.Point(438, 68);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(299, 27);
+            this.txtPhone.TabIndex = 18;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.txtEmail.Location = new System.Drawing.Point(438, 38);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(299, 27);
+            this.txtEmail.TabIndex = 18;
             // 
             // label2
             // 
@@ -391,9 +340,9 @@
             this.label2.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
             this.label2.Location = new System.Drawing.Point(24, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 19);
+            this.label2.Size = new System.Drawing.Size(74, 19);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Name:";
+            this.label2.Text = "Password:";
             // 
             // label5
             // 
@@ -401,21 +350,20 @@
             this.label5.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
             this.label5.Location = new System.Drawing.Point(375, 40);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 19);
+            this.label5.Size = new System.Drawing.Size(46, 19);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Quanity:";
+            this.label5.Text = "Email:";
             // 
             // txtID
             // 
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtID.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
             this.txtID.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtID.Location = new System.Drawing.Point(74, 38);
+            this.txtID.Location = new System.Drawing.Point(105, 38);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(278, 27);
+            this.txtID.Size = new System.Drawing.Size(245, 27);
             this.txtID.TabIndex = 19;
-            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
             // label1
             // 
@@ -432,23 +380,12 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Roboto Condensed Light", 35F);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label9.Location = new System.Drawing.Point(273, 19);
+            this.label9.Location = new System.Drawing.Point(228, 19);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(250, 57);
+            this.label9.Size = new System.Drawing.Size(340, 57);
             this.label9.TabIndex = 12;
-            this.label9.Text = "Quản lí sách";
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Tan;
-            this.button2.Location = new System.Drawing.Point(731, 11);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(25, 25);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = true;
+            this.label9.Text = "Quản lí nhân viên";
             // 
             // button1
             // 
@@ -457,39 +394,23 @@
             this.button1.Location = new System.Drawing.Point(762, 11);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(25, 25);
-            this.button1.TabIndex = 15;
+            this.button1.TabIndex = 13;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panel2
+            // button2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Tan;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 5);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2, 615);
-            this.panel2.TabIndex = 16;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Tan;
+            this.button2.Location = new System.Drawing.Point(731, 11);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(25, 25);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "-";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Tan;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(795, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(4, 615);
-            this.panel3.TabIndex = 17;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Tan;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(2, 618);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(793, 2);
-            this.panel4.TabIndex = 18;
-            // 
-            // frmBook
+            // frmStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -497,23 +418,20 @@
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnE;
             this.ClientSize = new System.Drawing.Size(799, 620);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.gb1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgvBook);
+            this.Controls.Add(this.dgvStaff);
             this.Font = new System.Drawing.Font("Roboto Condensed Light", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmBook";
+            this.Name = "frmStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBook";
-            this.Load += new System.EventHandler(this.frmBook_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).EndInit();
+            this.Load += new System.EventHandler(this.frmStaff_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
             this.gb1.ResumeLayout(false);
             this.gb1.PerformLayout();
             this.ResumeLayout(false);
@@ -522,18 +440,15 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvBook;
+        private System.Windows.Forms.DataGridView dgvStaff;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox gb1;
-        private System.Windows.Forms.DateTimePicker dpPubDate;
-        private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtAddr;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtQuanity;
+        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtID;
@@ -545,13 +460,9 @@
         private System.Windows.Forms.Button btnD;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnA;
-        private System.Windows.Forms.ComboBox cbPub;
-        private System.Windows.Forms.ComboBox cbAuthor;
-        private System.Windows.Forms.ComboBox cbCate;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button2;
     }
 }

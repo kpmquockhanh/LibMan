@@ -24,7 +24,6 @@ namespace GUI
         {
             InitializeComponent();
         }
-        BUS_Book bookBUS = new BUS_Book();
 
         private void btnA_Click(object sender, EventArgs e)
         {
@@ -35,13 +34,14 @@ namespace GUI
                 b.Name = txtName.Text;
                 b.Price = int.Parse(txtPrice.Text);
                 b.Publication_date = DateTime.Parse(dpPubDate.Value.ToShortDateString());
-                b.Publisher_id = int.Parse(cbxPublisher.Text);
-                b.Author_id = int.Parse(cbxAuthor.Text);
-                b.Category_id = int.Parse(cbxCategory.Text);
+                b.Publisher_id = int.Parse(cbPub.Text);
+                b.Author_id = int.Parse(cbAuthor.Text);
+                b.Category_id = int.Parse(cbCate.Text);
                 b.Quantity = int.Parse(txtQuanity.Text);
-                if (bookBUS.InsertBook(b)==1)
+                if (bus_book.InsertBook(b) == 1)
                 {
                     MessageBox.Show("Thành công");
+                    frmBook_Load(sender, e);
                 }
                 else
                     MessageBox.Show("Không thành công");
@@ -54,7 +54,7 @@ namespace GUI
 
         private void frmBook_Load(object sender, EventArgs e)
         {
-         
+            dpPubDate.Value = DateTime.Now;
             // Load DataGridView
             dataTable = new DataTable();
             dataTable = bus_book.LoadDataGridViewBook();
@@ -63,24 +63,25 @@ namespace GUI
             // Load ComboxCategory
             dataTable = new DataTable();
             dataTable = bus_category.LoadDataGridViewCategory();
-            cbxCategory.DataSource = dataTable;
-            cbxCategory.DisplayMember = "category_id";
+            cbCate.DataSource = dataTable;
+            cbCate.DisplayMember = "category_name";
+            cbCate.ValueMember = "category_id";
 
             // Load ComboxAuthor
             dataTable = new DataTable();
             dataTable = bus_author.LoadDataGridViewAuthor();
-            cbxAuthor.DataSource = dataTable;
-            cbxAuthor.DisplayMember = "author_id";
+            cbAuthor.DataSource = dataTable;
+            cbAuthor.ValueMember = "author_id";
+            cbAuthor.DisplayMember = "author_name";
 
             // Load ComboxPublisher
             dataTable = new DataTable();
             dataTable = bus_publisher.LoadDataGridViewPublisher();
-            cbxPublisher.DataSource = dataTable;
-            cbxPublisher.DisplayMember = "publisher_id";
+            cbPub.DataSource = dataTable;
+            cbPub.DisplayMember = "publisher_name";
+            cbPub.ValueMember = "publisher_id";
         }
 
-        private void txtPrice_TextChanged(object sender, EventArgs e)
-        {}
 
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -91,10 +92,6 @@ namespace GUI
             }
         }
 
-        private void txtQuanity_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void txtQuanity_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -114,33 +111,23 @@ namespace GUI
                 b.Name = txtName.Text;
                 b.Price = int.Parse(txtPrice.Text);
                 b.Publication_date = DateTime.Parse(dpPubDate.Value.ToShortDateString());
-                b.Publisher_id = int.Parse(cbxPublisher.Text);
-                b.Author_id = int.Parse(cbxAuthor.Text);
-                b.Category_id = int.Parse(cbxCategory.Text);
+                b.Publisher_id = int.Parse(cbPub.Text);
+                b.Author_id = int.Parse(cbAuthor.Text);
+                b.Category_id = int.Parse(cbCate.Text);
                 b.Quantity = int.Parse(txtQuanity.Text);
-                if (bookBUS.UpdateBook(b) == 1)
+                if (bus_book.UpdateBook(b) == 1)
                 {
                     MessageBox.Show("Thành công");
                     frmBook_Load(sender, e);
                 }
                 else
                     MessageBox.Show("Không thành công");
-                
+
             }
             else
             {
                 MessageBox.Show("Hãy điển đủ thông tin!");
             }
-        }
-
-        private void dgvBook_SelectionChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void dgvBook_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-
         }
 
         private void dgvBook_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -155,13 +142,14 @@ namespace GUI
                 dpPubDate.Text = dgvBook.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txtPrice.Text = dgvBook.Rows[e.RowIndex].Cells[3].Value.ToString();
                 txtQuanity.Text = dgvBook.Rows[e.RowIndex].Cells[4].Value.ToString();
-                cbxAuthor.Text = dgvBook.Rows[e.RowIndex].Cells[6].Value.ToString();
-                cbxPublisher.Text = dgvBook.Rows[e.RowIndex].Cells[7].Value.ToString();
-                cbxCategory.Text = dgvBook.Rows[e.RowIndex].Cells[5].Value.ToString();
-                txtID.Enabled = false;
-            }catch(ArgumentOutOfRangeException ex)
-            {}
-            
+                cbAuthor.Text = dgvBook.Rows[e.RowIndex].Cells[6].Value.ToString();
+                cbPub.Text = dgvBook.Rows[e.RowIndex].Cells[7].Value.ToString();
+                cbCate.Text = dgvBook.Rows[e.RowIndex].Cells[5].Value.ToString();
+                //txtID.Enabled = false;
+            }
+            catch (ArgumentOutOfRangeException)
+            { }
+
         }
 
         private void txtID_KeyPress(object sender, KeyPressEventArgs e)
@@ -174,8 +162,8 @@ namespace GUI
         }
         private bool checkNull()
         {
-            if (txtID.Text == "" || txtName.Text == "" || txtPrice.Text == ""|| txtQuanity.Text == ""
-                || cbxAuthor.Text == "" || cbxCategory.Text == "" || cbxPublisher.Text == "")
+            if (txtID.Text == "" || txtName.Text == "" || txtPrice.Text == "" || txtQuanity.Text == ""
+                || cbAuthor.Text == "" || cbCate.Text == "" || cbPub.Text == "")
             {
                 return false;
             }
@@ -184,12 +172,12 @@ namespace GUI
 
         private void btnD_Click(object sender, EventArgs e)
         {
-            if(checkNull())
+            if (checkNull())
             {
-                DialogResult dlr = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin sách " 
-                    + txtName.Text + "?","Thông báo", MessageBoxButtons.YesNo,
+                DialogResult dlr = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin sách "
+                    + txtName.Text + "?", "Thông báo", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question);
-                if (DialogResult.Yes== dlr)
+                if (DialogResult.Yes == dlr)
                 {
                     if (bus_book.DeleteBook(txtID.Text) == 1)
                     {
@@ -209,7 +197,7 @@ namespace GUI
             {
                 MessageBox.Show("Hãy tìm thông tin sách cần xóa hoặc chọn item sách trong bảng sách!");
             }
-            
+
         }
 
         private void btnR_Click(object sender, EventArgs e)
@@ -218,9 +206,9 @@ namespace GUI
             txtName.Clear();
             txtPrice.Clear();
             txtQuanity.Clear();
-            cbxAuthor.Text = "";
-            cbxCategory.Text = "";
-            cbxPublisher.Text = "";
+            cbAuthor.Text = "";
+            cbCate.Text = "";
+            cbPub.Text = "";
             txtID.Focus();
         }
 
@@ -231,7 +219,7 @@ namespace GUI
 
         private void btnSeach_Click(object sender, EventArgs e)
         {
-            if(txtID.Text != "")
+            if (txtID.Text != "")
             {
                 DTO_Book dto_book = new DTO_Book();
                 String id = txtID.Text;
@@ -242,9 +230,9 @@ namespace GUI
                     txtPrice.Text = dto_book.Price.ToString();
                     txtQuanity.Text = dto_book.Quantity.ToString();
                     dpPubDate.Text = dto_book.Publication_date.ToShortDateString();
-                    cbxCategory.Text = dto_book.Category_id.ToString();
-                    cbxAuthor.Text = dto_book.Author_id.ToString();
-                    cbxPublisher.Text = dto_book.Publisher_id.ToString();
+                    cbCate.Text = dto_book.Category_id.ToString();
+                    cbAuthor.Text = dto_book.Author_id.ToString();
+                    cbPub.Text = dto_book.Publisher_id.ToString();
                 }
                 else
                 {
@@ -256,7 +244,12 @@ namespace GUI
                 MessageBox.Show("Hãy nhập mã sách cần tìm!");
             }
 
-            
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
