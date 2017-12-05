@@ -61,15 +61,11 @@ namespace BUS
 
         }
 
-        public int DeletePublisher(DTO_Publisher publisher)
+        public int DeletePublisher(String publisher)
         {
             try
             {
-                if (publisher.Publisher_name.Contains("'"))
-                {
-                    publisher.Publisher_name = checkString(publisher.Publisher_name);
-                }
-                return publisherDAO.Delete(publisher.Publisher_name);
+                return publisherDAO.Delete(publisher);
             }
             catch (Exception e)
             {

@@ -17,6 +17,7 @@ namespace GUI
         DataTable dataTable;
         String id;
         BUS_Author bus_author = new BUS_Author();
+        BUS_Book bus_book = new BUS_Book();
         public frmAuthor()
         {
             InitializeComponent();
@@ -62,11 +63,14 @@ namespace GUI
             if (checkNull())
             {
                 DialogResult dlr = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin tác giả "
-                    + txtAuthorName.Text + "?", "Thông báo", MessageBoxButtons.YesNo,
+                    + txtAuthorName.Text + " và các sách của " + txtAuthorName.Text + "?", "Thông báo", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question);
                 if (DialogResult.Yes == dlr)
                 {
-                    if (bus_author.DeleteAuthor(txtAuthorID.Text) == 1)
+                    if ((bus_book.DeleteBookByAuthor(txtAuthorID.Text) == 1
+                        && bus_author.DeleteAuthor(txtAuthorID.Text) == 1 )
+                        || (bus_book.DeleteBookByAuthor(txtAuthorID.Text) == 0 
+                        && bus_author.DeleteAuthor(txtAuthorID.Text) == 1))
                     {
                         MessageBox.Show("Thành công");
                         frmAuthor_Load(sender, e);

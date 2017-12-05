@@ -42,6 +42,11 @@ namespace GUI
                 {
                     MessageBox.Show("Thành công");
                     frmBook_Load(sender, e);
+                }else if (bus_book.InsertBook(b) == -5)
+                {
+                    MessageBox.Show("Nhập mã sách bị trùng!");
+                    txtID.Text = "";
+                    txtID.Focus();
                 }
                 else
                     MessageBox.Show("Không thành công");
@@ -64,21 +69,20 @@ namespace GUI
             dataTable = new DataTable();
             dataTable = bus_category.LoadDataGridViewCategory();
             cbCate.DataSource = dataTable;
-            cbCate.DisplayMember = "category_name";
-            cbCate.ValueMember = "category_id";
+            cbCate.DisplayMember = "category_id";
 
             // Load ComboxAuthor
             dataTable = new DataTable();
             dataTable = bus_author.LoadDataGridViewAuthor();
             cbAuthor.DataSource = dataTable;
             cbAuthor.ValueMember = "author_id";
-            cbAuthor.DisplayMember = "author_name";
+            cbAuthor.DisplayMember = "author_id";
 
             // Load ComboxPublisher
             dataTable = new DataTable();
             dataTable = bus_publisher.LoadDataGridViewPublisher();
             cbPub.DataSource = dataTable;
-            cbPub.DisplayMember = "publisher_name";
+            cbPub.DisplayMember = "publisher_id";
             cbPub.ValueMember = "publisher_id";
 
             //Set field
@@ -264,6 +268,11 @@ namespace GUI
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void gb1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
