@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmPublisher : Form
+    public partial class mbConf : Form
     {
-        public frmPublisher()
+        public mbConf()
         {
             InitializeComponent();
         }

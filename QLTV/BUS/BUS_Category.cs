@@ -55,20 +55,24 @@ namespace BUS
                 }
                 return categoryDAO.Update(category);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return -1;
             }
 
         }
 
-        public int DeleteCategory(string category_id)
+        public int DeleteCategory(DTO_Category category)
         {
             try
             {
-                return categoryDAO.Delete(category_id);
+                if (category.Category_name.Contains("'"))
+                {
+                    category.Category_name = checkString(category.Category_name);
+                }
+                return categoryDAO.Delete(category.Category_name);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return -1;
             }

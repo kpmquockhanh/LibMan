@@ -53,7 +53,7 @@ namespace BUS
                 }
                 return authorDAO.Update(author);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return -1;
             }
@@ -66,7 +66,7 @@ namespace BUS
             {
                 return authorDAO.Delete(author_id);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return -1;
             }

@@ -3,13 +3,11 @@ using DAO;
 using DTO;
 using System.Data;
 using System.Text.RegularExpressions;
-using System.Collections.Generic;
 
 namespace BUS
 {
     public class BUS_Book
     {
-        List<Int32> listID = new List<Int32>();
         DAO_Book bookDAO = new DAO_Book();
         DAO_Book dataBook = new DAO_Book();
         DataTable dataTable = new DataTable();
@@ -20,27 +18,13 @@ namespace BUS
             {
                 book.Name = checkString(book.Name);
             }
-            if (checkID(book.ID))
-            {
-                return -5;
-            }
-            int res = bookDAO.Insert(book);
-            if(res == 1)
-            {
-                listID.Add(book.ID);
-            }
-            return res;
+            return bookDAO.Insert(book);
         }
         
 
         public DataTable LoadDataGridViewBook()
         {
-            dataTable = dataBook.GetAllDataTable();
-            foreach(DataRow row in dataTable.Rows)
-            {
-                int id = Int32.Parse(row["b_id"].ToString());
-            }
-            return dataTable;
+            return dataTable = dataBook.GetAllDataTable();
         }
          public DTO_Book SearchBook(String condition, String value)
         {
@@ -72,7 +56,7 @@ namespace BUS
                     book.Name = checkString(book.Name);
                 }
                 return bookDAO.Update(book);
-            }catch(Exception e)
+            }catch(Exception)
             {
                 return -1;
             }
@@ -83,49 +67,12 @@ namespace BUS
         {
             try
             {
-                int res = bookDAO.Delete(book_id);
-                if (res == 1) listID.Remove(Int32.Parse(book_id));
-                return res;
-            }catch(Exception e)
+                return bookDAO.Delete(book_id);
+            }catch(Exception)
             {
                 return -1;
             }
             
-        }
-        public int DeleteBookByPublisher(String publisher_id)
-        {
-            try
-            {
-                return bookDAO.DeleteByPublisher(publisher_id);
-            }
-            catch (Exception e)
-            {
-                return -1;
-            }
-
-        }
-
-        public int DeleteBookByAuthor(String author_id)
-        {
-            try
-            {
-                return bookDAO.DeleteByAuthor(author_id);
-            }
-            catch (Exception e)
-            {
-                return -1;
-            }
-        }
-        public int DeleteBookByCategory(String category_id)
-        {
-            try
-            {
-                return bookDAO.DeleteByCategory(category_id);
-            }
-            catch (Exception e)
-            {
-                return -1;
-            }
         }
         public String checkString(String name)
         {
@@ -144,15 +91,6 @@ namespace BUS
                 }
             }
             return text;
-        }
-
-        public bool checkID (int id)
-        {
-            if (listID.Contains(id))
-            {
-                return false;
-            }
-            return true;
         }
     }
 }

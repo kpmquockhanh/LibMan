@@ -57,12 +57,6 @@
     <Compile Include="frmBook.Designer.cs">
       <DependentUpon>frmBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCategory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCategory.Designer.cs">
-      <DependentUpon>frmCategory.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +87,18 @@
     <Compile Include="frmStaff.Designer.cs">
       <DependentUpon>frmStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="mbConf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mbConf.Designer.cs">
+      <DependentUpon>mbConf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mbErr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mbErr.Designer.cs">
+      <DependentUpon>mbErr.cs</DependentUpon>
+    </Compile>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -104,9 +110,6 @@
     <EmbeddedResource Include="frmBook.resx">
       <DependentUpon>frmBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCategory.resx">
-      <DependentUpon>frmCategory.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +118,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSearchBook.resx">
       <DependentUpon>frmSearchBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mbConf.resx">
+      <DependentUpon>mbConf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mbErr.resx">
+      <DependentUpon>mbErr.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\GUI.frmBook.resources" />
     <EmbeddedResource Include="obj\Debug\GUI.frmLogin.resources" />
@@ -128,6 +137,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="bin\Debug\GUI.exe.config" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
@@ -176,6 +186,10 @@
     <Content Include="obj\Debug\GUI.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\GUI.exe" />
     <Content Include="obj\Debug\GUI.pdb" />
+    <None Include="Resources\OK_02-512.png" />
+    <None Include="Resources\e52-512.png" />
+    <None Include="Resources\614397-x-512.png" />
+    <None Include="Resources\614338-.svg-512.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />

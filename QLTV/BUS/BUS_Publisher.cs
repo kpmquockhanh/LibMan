@@ -54,20 +54,24 @@ namespace BUS
                 }
                 return publisherDAO.Update(publisher);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return -1;
             }
 
         }
 
-        public int DeletePublisher(String publisher)
+        public int DeletePublisher(DTO_Publisher publisher)
         {
             try
             {
-                return publisherDAO.Delete(publisher);
+                if (publisher.Publisher_name.Contains("'"))
+                {
+                    publisher.Publisher_name = checkString(publisher.Publisher_name);
+                }
+                return publisherDAO.Delete(publisher.Publisher_name);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return -1;
             }

@@ -12,13 +12,13 @@ namespace DAO
         public int Insert(DTO_Staff staff)
         {
 
-            string sql = "INSERT INTO Staff (s_id,s_password,s_name,s_address,s_email,s_phone_number) VALUES('"+staff.ID+"','"+staff.Password+"','"+staff.Name+"','"+staff.Addr+"','"+staff.Email+"','"+staff.Phone+"')";
+            string sql = "INSERT INTO Staff (s_id,s_password,s_name,s_address,s_email,s_phone_number) VALUES('"+staff.ID+"','"+staff.Password+"',N'"+staff.Name+"',N'"+staff.Addr+"','"+staff.Email+"','"+staff.Phone+"')";
             return this.ExecuteNonQuery(sql);
         }
 
         public int Update(DTO_Staff staff)
         {
-            string sql = "UPDATE Staff SET s_id='"+staff.ID+"',s_password='"+staff.Password+"',s_name='"+staff.Name+"',s_address='"+staff.Addr+"',s_email='"+staff.Email+"',s_phone_number='"+staff.Phone+"'";
+            string sql = "UPDATE Staff SET s_id='"+staff.ID+"',s_password='"+staff.Password+"',s_name='"+staff.Name+"',s_address='"+staff.Addr+"',s_email='"+staff.Email+"',s_phone_number='"+staff.Phone+ "'WHERE s_id = " + staff.ID;
             return this.ExecuteNonQuery(sql);
         }
 

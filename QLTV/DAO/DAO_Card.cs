@@ -19,24 +19,24 @@ namespace DAO
 
         public int Update(DTO_Card card)
         {
-            string sql = "UPDATE Staff SET c_id='" + card.ID + "',r_id='" + card.ReaderID + "',expired_date='" + card.Expired_date + "'";
+            string sql = "UPDATE Card SET c_id='" + card.ID + "',r_id='" + card.ReaderID + "',expired_date='" + card.Expired_date + "'WHERE c_id = " + card.ID;
             return this.ExecuteNonQuery(sql);
         }
 
         public int Delete(string c_id)
         {
-            String sql = "DELETE Staff WHERE c_id = " + c_id + ";";
+            String sql = "DELETE Card WHERE c_id = " + c_id + ";";
             return this.ExecuteNonQuery(sql);
         }
 
         public DataTable GetAllDataTable()
         {
-            return this.getTable("Select * from Staff");
+            return this.getTable("Select * from Card");
         }
 
         public DataTable GetDataTableBy(String condition, String value)
         {
-            return this.getTable("select * from Staff where " + condition + " = '" + value + "'");
+            return this.getTable("select * from Card where " + condition + " = '" + value + "'");
         }
     }
 }

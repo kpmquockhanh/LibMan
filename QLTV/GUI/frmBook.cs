@@ -34,19 +34,14 @@ namespace GUI
                 b.Name = txtName.Text;
                 b.Price = int.Parse(txtPrice.Text);
                 b.Publication_date = DateTime.Parse(dpPubDate.Value.ToShortDateString());
-                b.Publisher_id = int.Parse(cbPub.Text);
-                b.Author_id = int.Parse(cbAuthor.Text);
-                b.Category_id = int.Parse(cbCate.Text);
+                b.Publisher_id = int.Parse(cbPub.SelectedValue.ToString());
+                b.Author_id = int.Parse(cbAuthor.SelectedValue.ToString());
+                b.Category_id = int.Parse(cbCate.SelectedValue.ToString());
                 b.Quantity = int.Parse(txtQuanity.Text);
                 if (bus_book.InsertBook(b) == 1)
                 {
                     MessageBox.Show("Thành công");
                     frmBook_Load(sender, e);
-                }else if (bus_book.InsertBook(b) == -5)
-                {
-                    MessageBox.Show("Nhập mã sách bị trùng!");
-                    txtID.Text = "";
-                    txtID.Focus();
                 }
                 else
                     MessageBox.Show("Không thành công");
@@ -69,20 +64,21 @@ namespace GUI
             dataTable = new DataTable();
             dataTable = bus_category.LoadDataGridViewCategory();
             cbCate.DataSource = dataTable;
-            cbCate.DisplayMember = "category_id";
+            cbCate.DisplayMember = "category_name";
+            cbCate.ValueMember = "category_id";
 
             // Load ComboxAuthor
             dataTable = new DataTable();
             dataTable = bus_author.LoadDataGridViewAuthor();
             cbAuthor.DataSource = dataTable;
             cbAuthor.ValueMember = "author_id";
-            cbAuthor.DisplayMember = "author_id";
+            cbAuthor.DisplayMember = "author_name";
 
             // Load ComboxPublisher
             dataTable = new DataTable();
             dataTable = bus_publisher.LoadDataGridViewPublisher();
             cbPub.DataSource = dataTable;
-            cbPub.DisplayMember = "publisher_id";
+            cbPub.DisplayMember = "publisher_name";
             cbPub.ValueMember = "publisher_id";
 
             //Set field
@@ -125,13 +121,13 @@ namespace GUI
             if (checkNull())
             {
                 DTO_Book b = new DTO_Book();
-                b.ID = int.Parse(id);
+                b.ID = int.Parse(txtID.Text);
                 b.Name = txtName.Text;
                 b.Price = int.Parse(txtPrice.Text);
                 b.Publication_date = DateTime.Parse(dpPubDate.Value.ToShortDateString());
-                b.Publisher_id = int.Parse(cbPub.Text);
-                b.Author_id = int.Parse(cbAuthor.Text);
-                b.Category_id = int.Parse(cbCate.Text);
+                b.Publisher_id = int.Parse(cbPub.SelectedValue.ToString());
+                b.Author_id = int.Parse(cbAuthor.SelectedValue.ToString());
+                b.Category_id = int.Parse(cbCate.SelectedValue.ToString());
                 b.Quantity = int.Parse(txtQuanity.Text);
                 if (bus_book.UpdateBook(b) == 1)
                 {
@@ -268,11 +264,6 @@ namespace GUI
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void gb1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

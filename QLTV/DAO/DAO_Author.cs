@@ -11,13 +11,13 @@ namespace DAO
     {
         public int Insert(DTO_Author author)
         {
-            string sql = "INSERT INTO Author(author_id, author_name) VALUES('" + author.Author_id + "',N'" + author.Author_name + "');";
+            string sql = "INSERT INTO Author(author_id, author_name) VALUES('" + author.Author_id + "','" + author.Author_name + "');";
             return this.ExecuteNonQuery(sql);
         }
 
         public int Update(DTO_Author author)
         {
-            string sql = "UPDATE Author SET author_name = N'" + author.Author_name + "' WHERE author_id = '" + author.Author_id + "';";
+            string sql = "UPDATE Author SET author_name = '" + author.Author_name + "' WHERE author_id = '" + author.Author_id + "';";
             return this.ExecuteNonQuery(sql);
         }
 

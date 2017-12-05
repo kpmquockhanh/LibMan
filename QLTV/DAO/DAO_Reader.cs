@@ -13,13 +13,13 @@ namespace DAO
         {
 
             string sql = "INSERT INTO Reader(r_id, r_name, r_address, r_email, r_phone_number)"
-            + " VALUES('" + reader.ID + "','" + reader.Name + "','" + reader.Addr + "','" + reader.Email + "','" + reader.Phone + "')";
+            + " VALUES('" + reader.ID + "',N'" + reader.Name + "',N'" + reader.Addr + "','" + reader.Email + "','" + reader.Phone + "')";
             return this.ExecuteNonQuery(sql);
         }
 
         public int Update(DTO_Reader reader)
         {
-            string sql = "UPDATE Reader SET r_id='" + reader.ID + "',r_name='" + reader.Name + "',r_address='" + reader.Addr + "',r_email='" + reader.Email + "',r_phone_number='" +reader.Phone + "'";
+            string sql = "UPDATE Reader SET r_id='" + reader.ID + "',r_name='" + reader.Name + "',r_address='" + reader.Addr + "',r_email='" + reader.Email + "',r_phone_number='" +reader.Phone + "'WHERE r_id = '" + reader.ID;
             return this.ExecuteNonQuery(sql);
         }
 

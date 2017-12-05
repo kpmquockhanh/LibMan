@@ -19,7 +19,7 @@ namespace DAO
 
         public int Update(DTO_Borrow borrow)
         {
-            string sql = "UPDATE Borrow SET br_id='"+borrow.ID+ "',take_date='" + borrow.TakeDate + "',return_date='" + borrow.ReturnDate + "',quanity='" + borrow.Quanity + "',br_deposit='" + borrow.Deposit + "',b_id='" + borrow.BookID + "',s_id='" + borrow.StaffID + "',r_id='" + borrow.ReaderID + "'";
+            string sql = "UPDATE Borrow SET br_id='"+borrow.ID+ "',take_date='" + borrow.TakeDate + "',return_date='" + borrow.ReturnDate + "',quanity='" + borrow.Quanity + "',br_deposit='" + borrow.Deposit + "',b_id='" + borrow.BookID + "',s_id='" + borrow.StaffID + "',r_id='" + borrow.ReaderID + "'WHERE br_id = '" + borrow.ID;
             return this.ExecuteNonQuery(sql);
         }
 
