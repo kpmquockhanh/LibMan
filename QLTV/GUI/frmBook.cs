@@ -13,6 +13,13 @@ namespace GUI
 {
     public partial class frmBook : Form
     {
+        BUS_Book bus_book = new BUS_Book();
+        BUS_Author bus_author = new BUS_Author();
+        BUS_Publisher bus_publisher = new BUS_Publisher();
+        BUS_Category bus_category = new BUS_Category();
+
+        DataTable dataTable;
+        String id;
         public frmBook()
         {
             InitializeComponent();
@@ -21,27 +28,200 @@ namespace GUI
 
         private void btnA_Click(object sender, EventArgs e)
         {
-            DTO_Book b = new DTO_Book();
-            b.ID = int.Parse(txtID.Text);
-            b.Name = txtName.Text;
-            b.Price = int.Parse(txtPrice.Text);
-            b.Publication_date = DateTime.Parse(dpPubDate.Value.ToShortDateString());
-            b.Publisher_id = int.Parse(cbPub.Text);
-            b.Author_id = int.Parse(cbAuthor.Text);
-            b.Category_id = int.Parse(cbCate.Text);
-            b.Quantity = int.Parse(txtQuanity.Text);
-            if (bookBUS.InsertBook(b)==1)
+            if (checkNull())
             {
-                MessageBox.Show("Thành công");
+                DTO_Book b = new DTO_Book();
+                b.ID = int.Parse(txtID.Text);
+                b.Name = txtName.Text;
+                b.Price = int.Parse(txtPrice.Text);
+                b.Publication_date = DateTime.Parse(dpPubDate.Value.ToShortDateString());
+                b.Publisher_id = int.Parse(cbxPublisher.Text);
+                b.Author_id = int.Parse(cbxAuthor.Text);
+                b.Category_id = int.Parse(cbxCategory.Text);
+                b.Quantity = int.Parse(txtQuanity.Text);
+                if (bookBUS.InsertBook(b)==1)
+                {
+                    MessageBox.Show("Thành công");
+                }
+                else
+                    MessageBox.Show("Không thành công");
             }
             else
-                MessageBox.Show("Không thành công");
+            {
+                MessageBox.Show("Hãy nhập đủ thông tin");
+            }
+        }
+
+        private void frmBook_Load(object sender, EventArgs e)
+        {
+         
+            // Load DataGridView
+            dataTable = new DataTable();
+            dataTable = bus_book.LoadDataGridViewBook();
+            dgvBook.DataSource = dataTable;
+
+            // Load ComboxCategory
+            dataTable = new DataTable();
+            dataTable = bus_category.LoadDataGridViewCategory();
+            cbxCategory.DataSource = dataTable;
+            cbxCategory.DisplayMember = "category_id";
+
+            // Load ComboxAuthor
+            dataTable = new DataTable();
+            dataTable = bus_author.LoadDataGridViewAuthor();
+            cbxAuthor.DataSource = dataTable;
+            cbxAuthor.DisplayMember = "author_id";
+
+            // Load ComboxPublisher
+            dataTable = new DataTable();
+            dataTable = bus_publisher.LoadDataGridViewPublisher();
+            cbxPublisher.DataSource = dataTable;
+            cbxPublisher.DisplayMember = "publisher_id";
+        }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {}
+
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("Hãy nhập số!");
+            }
+        }
+
+        private void txtQuanity_TextChanged(object sender, EventArgs e)
+        {
 
         }
 
-        public void setColorDGV()
+        private void txtQuanity_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //dgvBook.Rows[-1].;
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("Hãy nhập số!");
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (checkNull())
+            {
+                DTO_Book b = new DTO_Book();
+                b.ID = int.Parse(id);
+                b.Name = txtName.Text;
+                b.Price = int.Parse(txtPrice.Text);
+                b.Publication_date = DateTime.Parse(dpPubDate.Value.ToShortDateString());
+                b.Publisher_id = int.Parse(cbxPublisher.Text);
+                b.Author_id = int.Parse(cbxAuthor.Text);
+                b.Category_id = int.Parse(cbxCategory.Text);
+                b.Quantity = int.Parse(txtQuanity.Text);
+                if (bookBUS.UpdateBook(b) == 1)
+                {
+                    MessageBox.Show("Thành công");
+                    frmBook_Load(sender, e);
+                }
+                else
+                    MessageBox.Show("Không thành công");
+                
+            }
+            else
+            {
+                MessageBox.Show("Hãy điển đủ thông tin!");
+            }
+        }
+
+        private void dgvBook_SelectionChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void dgvBook_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
+
+        private void dgvBook_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = e.RowIndex;
+            try
+            {
+                dgvBook.Rows[e.RowIndex].Selected = true;
+                txtID.Text = dgvBook.Rows[e.RowIndex].Cells[0].Value.ToString();
+                id = txtID.Text;
+                txtName.Text = dgvBook.Rows[e.RowIndex].Cells[1].Value.ToString();
+                dpPubDate.Text = dgvBook.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtPrice.Text = dgvBook.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtQuanity.Text = dgvBook.Rows[e.RowIndex].Cells[4].Value.ToString();
+                cbxAuthor.Text = dgvBook.Rows[e.RowIndex].Cells[6].Value.ToString();
+                cbxPublisher.Text = dgvBook.Rows[e.RowIndex].Cells[7].Value.ToString();
+                cbxCategory.Text = dgvBook.Rows[e.RowIndex].Cells[5].Value.ToString();
+                txtID.Enabled = false;
+            }catch(ArgumentOutOfRangeException ex)
+            {}
+            
+        }
+
+        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("Hãy nhập số!");
+            }
+        }
+        private bool checkNull()
+        {
+            if (txtID.Text == "" || txtName.Text == "" || txtPrice.Text == ""|| txtQuanity.Text == ""
+                || cbxAuthor.Text == "" || cbxCategory.Text == "" || cbxPublisher.Text == "")
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private void btnD_Click(object sender, EventArgs e)
+        {
+            if(checkNull())
+            {
+                DialogResult dlr = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin sách " 
+                    + txtName.Text + "?","Thông báo", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+                if (DialogResult.Yes== dlr)
+                {
+                    if (bus_book.Delete(txtID.Text) == 1)
+                    {
+                        MessageBox.Show("Thành công");
+                        frmBook_Load(sender, e);
+                        btnR_Click(sender, e);
+                    }
+                    else
+                        MessageBox.Show("Không thành công");
+                }
+                if (DialogResult.No == dlr)
+                {
+                    this.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy tìm thông tin sách cần xóa hoặc chọn item sách trong bảng sách!");
+            }
+            
+        }
+
+        private void btnR_Click(object sender, EventArgs e)
+        {
+            txtID.Clear();
+            txtName.Clear();
+            txtPrice.Clear();
+            txtQuanity.Clear();
+            cbxAuthor.Text = "";
+            cbxCategory.Text = "";
+            cbxPublisher.Text = "";
+            txtID.Focus();
         }
 
         private void btnE_Click(object sender, EventArgs e)
@@ -49,30 +229,34 @@ namespace GUI
             this.Close();
         }
 
-        private void dgvBook_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void btnSeach_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(e.RowIndex.ToString());
-            if (e.RowIndex>-1)
-                dgvBook.Rows[e.RowIndex].Selected = true;
+            if(txtID.Text != "")
+            {
+                DTO_Book dto_book = new DTO_Book();
+                String id = txtID.Text;
+                dto_book = bus_book.SearchBook("b_id", txtID.Text);
+                if (dto_book != null)
+                {
+                    txtName.Text = dto_book.Name;
+                    txtPrice.Text = dto_book.Price.ToString();
+                    txtQuanity.Text = dto_book.Quantity.ToString();
+                    dpPubDate.Text = dto_book.Publication_date.ToShortDateString();
+                    cbxCategory.Text = dto_book.Category_id.ToString();
+                    cbxAuthor.Text = dto_book.Author_id.ToString();
+                    cbxPublisher.Text = dto_book.Publisher_id.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy nhập mã sách cần tìm!");
+            }
 
             
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            frmSearchBook SB = new frmSearchBook();
-            SB.ShowDialog();
-            MessageBox.Show(SB.textBox1.Text);
-        }
-
-        private void frmBook_Load(object sender, EventArgs e)
-        {
-            dgvBook.DataSource = bookBUS.getAllDataTable();
         }
     }
 }
