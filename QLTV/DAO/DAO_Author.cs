@@ -11,7 +11,7 @@ namespace DAO
     {
         public int Insert(DTO_Author author)
         {
-            string sql = "INSERT INTO Author(author_name) VALUES('" + author.Author_name + "');";
+            string sql = "INSERT INTO Author(author_id, author_name) VALUES('" + author.Author_id + "','" + author.Author_name + "');";
             return this.ExecuteNonQuery(sql);
         }
 
@@ -23,7 +23,7 @@ namespace DAO
 
         public int Delete(string author_id)
         {
-            String sql = "DELETE Author WHERE author_id = " + author_id + ";";
+            String sql = "DELETE Author WHERE author_id = '" + author_id + "';";
             return this.ExecuteNonQuery(sql);
         }
 
