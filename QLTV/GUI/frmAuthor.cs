@@ -16,7 +16,7 @@ namespace GUI
     {
         DataTable dataTable;
         String id;
-        BUS_Author bus_author;
+        BUS_Author bus_author = new BUS_Author();
         public frmAuthor()
         {
             InitializeComponent();
@@ -48,6 +48,7 @@ namespace GUI
                 else
                 {
                     MessageBox.Show("Không tìm thấy!");
+                    txtAuthorID.Text = "";
                 }
             }
             else
@@ -103,6 +104,8 @@ namespace GUI
                 {
                     MessageBox.Show("Thành công");
                     frmAuthor_Load(sender, e);
+                    txtAuthorID.Text = "";
+                    txtAuthorName.Text = "";
                 }
                 else
                     MessageBox.Show("Không thành công");
@@ -125,6 +128,9 @@ namespace GUI
                 if (bus_author.InsertAuthor(b) == 1)
                 {
                     MessageBox.Show("Thành công");
+                    frmAuthor_Load(sender, e);
+
+
                 }
                 else
                     MessageBox.Show("Không thành công");

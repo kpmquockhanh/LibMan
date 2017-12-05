@@ -101,6 +101,9 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPublisher.resx">
+      <DependentUpon>frmPublisher.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSearchBook.resx">
       <DependentUpon>frmSearchBook.cs</DependentUpon>
     </EmbeddedResource>

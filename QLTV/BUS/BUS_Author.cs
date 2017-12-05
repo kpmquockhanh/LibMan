@@ -35,7 +35,7 @@ namespace BUS
             {
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    dto_auther.Author_id = int.Parse(row["author_name"].ToString());
+                    dto_auther.Author_id = int.Parse(row["author_id"].ToString());
                     dto_auther.Author_name = row["author_name"].ToString();
                     return dto_auther;
                 }
