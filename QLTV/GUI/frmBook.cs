@@ -191,7 +191,7 @@ namespace GUI
                     MessageBoxIcon.Question);
                 if (DialogResult.Yes== dlr)
                 {
-                    if (bus_book.Delete(txtID.Text) == 1)
+                    if (bus_book.DeleteBook(txtID.Text) == 1)
                     {
                         MessageBox.Show("Thành công");
                         frmBook_Load(sender, e);

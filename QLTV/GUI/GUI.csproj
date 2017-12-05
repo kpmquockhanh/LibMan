@@ -63,6 +63,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPublisher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPublisher.Designer.cs">
+      <DependentUpon>frmPublisher.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSearchBook.cs">
       <SubType>Form</SubType>
     </Compile>

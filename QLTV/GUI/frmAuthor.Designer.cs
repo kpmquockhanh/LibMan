@@ -35,6 +35,11 @@
             this.dgvAuthor = new System.Windows.Forms.DataGridView();
             this.author_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.author_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAddAuthor = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnSeach = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAuthor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,6 +49,8 @@
             this.txtAuthorID.Name = "txtAuthorID";
             this.txtAuthorID.Size = new System.Drawing.Size(146, 20);
             this.txtAuthorID.TabIndex = 0;
+            this.txtAuthorID.TextChanged += new System.EventHandler(this.txtAuthorID_TextChanged);
+            this.txtAuthorID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAuthorID_KeyPress);
             // 
             // txtAuthorName
             // 
@@ -81,6 +88,7 @@
             this.dgvAuthor.Name = "dgvAuthor";
             this.dgvAuthor.Size = new System.Drawing.Size(395, 150);
             this.dgvAuthor.TabIndex = 2;
+            this.dgvAuthor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAuthor_CellClick);
             // 
             // author_id
             // 
@@ -94,11 +102,66 @@
             this.author_name.HeaderText = "Tên giác giả";
             this.author_name.Name = "author_name";
             // 
+            // btnAddAuthor
+            // 
+            this.btnAddAuthor.Location = new System.Drawing.Point(493, 71);
+            this.btnAddAuthor.Name = "btnAddAuthor";
+            this.btnAddAuthor.Size = new System.Drawing.Size(75, 23);
+            this.btnAddAuthor.TabIndex = 3;
+            this.btnAddAuthor.Text = "Thêm";
+            this.btnAddAuthor.UseVisualStyleBackColor = true;
+            this.btnAddAuthor.Click += new System.EventHandler(this.btnAddAuthor_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(493, 120);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 3;
+            this.btnEdit.Text = "Sửa";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(493, 176);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnSeach
+            // 
+            this.btnSeach.Location = new System.Drawing.Point(493, 226);
+            this.btnSeach.Name = "btnSeach";
+            this.btnSeach.Size = new System.Drawing.Size(75, 23);
+            this.btnSeach.TabIndex = 3;
+            this.btnSeach.Text = "Tìm kiếm";
+            this.btnSeach.UseVisualStyleBackColor = true;
+            this.btnSeach.Click += new System.EventHandler(this.btnSeach_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(493, 272);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // frmAuthor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(755, 509);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnSeach);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnAddAuthor);
             this.Controls.Add(this.dgvAuthor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -122,5 +185,10 @@
         private System.Windows.Forms.DataGridView dgvAuthor;
         private System.Windows.Forms.DataGridViewTextBoxColumn author_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn author_name;
+        private System.Windows.Forms.Button btnAddAuthor;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnSeach;
+        private System.Windows.Forms.Button btnExit;
     }
 }

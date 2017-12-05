@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace BUS
 {
-    public class BUS_Book:DAO_Book
+    public class BUS_Book
     {
         DAO_Book bookDAO = new DAO_Book();
         DAO_Book dataBook = new DAO_Book();
@@ -63,15 +63,11 @@ namespace BUS
             
         }
 
-        public int DeleteBook(DTO_Book book)
+        public int DeleteBook(String book_id)
         {
             try
             {
-                if (book.Name.Contains("'"))
-                {
-                    book.Name = checkString(book.Name);
-                }
-                return bookDAO.Delete(book.Name);
+                return bookDAO.Delete(book_id);
             }catch(Exception e)
             {
                 return -1;

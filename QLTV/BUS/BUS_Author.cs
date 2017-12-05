@@ -14,7 +14,7 @@ namespace BUS
         DAO_Author authorDAO = new DAO_Author();
         DataTable dataTable = new DataTable();
         DTO_Author dto_auther = new DTO_Author();
-        public int InsertBook(DTO_Author author)
+        public int InsertAuthor(DTO_Author author)
         {
             if (author.Author_name.Contains("'"))
             {
@@ -60,15 +60,11 @@ namespace BUS
 
         }
 
-        public int DeleteAuthor(DTO_Author author)
+        public int DeleteAuthor(String author_id)
         {
             try
             {
-                if (author.Author_name.Contains("'"))
-                {
-                    author.Author_name = checkString(author.Author_name);
-                }
-                return authorDAO.Delete(author.Author_name);
+                return authorDAO.Delete(author_id);
             }
             catch (Exception e)
             {
