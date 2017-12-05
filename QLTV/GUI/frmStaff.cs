@@ -114,7 +114,7 @@ namespace GUI
         {
             if (checkNull())
             {
-                DialogResult dlr = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin sách "
+                DialogResult dlr = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin nhân viên "
                     + txtName.Text + "?", "Thông báo", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question);
                 if (DialogResult.Yes == dlr)

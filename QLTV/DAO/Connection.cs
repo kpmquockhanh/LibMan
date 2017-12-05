@@ -28,6 +28,7 @@ namespace DAO
             }
             catch (Exception)
             {
+                connection.Close();
                 return null;
             }
 
@@ -46,6 +47,7 @@ namespace DAO
             }
             catch (Exception)
             {
+                connection.Close();
                 return -1;
             }
 
