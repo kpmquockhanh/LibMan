@@ -9,36 +9,34 @@ namespace DAO
 {
     public class DAO_Publisher:Connection
     {
-        public int Insert(DTO_Book book)
+        public int Insert(DTO_Publisher publisher)
         {
-            string sql = "INSERT INTO Book(b_id, b_name, b_publication_date, b_price, b_quanity, category_id, author_id, publisher_id)"
-                + " VALUES('" + book.ID + "', '" + book.Name + "','" + book.Publication_date.ToShortDateString() + "', " + book.Price + ", "
-                + book.Quantity + ", '" + book.Category_id + "', '" + book.Author_id + "', '" + book.Publisher_id + "');";
+            string sql = "INSERT INTO Publisher(publisher_name, publisher_address)"
+                + " VALUES('" + publisher.Publisher_name + "', '" + publisher.Publisher_address + "');";
             return this.ExecuteNonQuery(sql);
         }
 
-        public int Update(DTO_Book book)
+        public int Update(DTO_Publisher publisher)
         {
-            string sql = "UPDATE Book SET b_name = '" + book.Name + "', b_publication_date = '" + book.Publication_date + "', b_price = " + book.Price
-                 + ", b_quanity = " + book.Quantity + ", category_id = '" + book.Category_id + "', author_id = '" + book.Author_id + "', publisher_id = '"
-                 + book.Publisher_id + "' WHERE b_id = '" + book.ID + "';";
+            string sql = "UPDATE Publisher SET publisher_name = '" + publisher.Publisher_name + "', publisher_address = '"
+                + publisher.Publisher_address + "' WHERE publisher_id = '" + publisher.Publisher_id + "';";
             return this.ExecuteNonQuery(sql);
         }
 
-        public int Delete(string b_id)
+        public int Delete(string publisher_id)
         {
-            String sql = "DELETE Book WHERE b_id = " + b_id + ";";
+            String sql = "DELETE Publisher WHERE b_id = " + publisher_id + ";";
             return this.ExecuteNonQuery(sql);
         }
 
         public DataTable GetAllDataTable()
         {
-            return this.getTable("Select * from Book");
+            return this.getTable("Select * from Publisher");
         }
 
         public DataTable GetDataTableBy(String condition, String value)
         {
-            return this.getTable("select * from Book where " + condition + " = '" + value + "'");
+            return this.getTable("select * from Publisher where " + condition + " = '" + value + "'");
         }
     }
 }

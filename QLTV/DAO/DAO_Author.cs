@@ -9,19 +9,22 @@ namespace DAO
 {
     public class DAO_Author:Connection
     {
-        public int Insert(DTO_Book book)
+        public int Insert(DTO_Author author)
         {
-            return 0;
+            string sql = "INSERT INTO Author(author_name) VALUES('" + author.Author_name + "');";
+            return this.ExecuteNonQuery(sql);
         }
 
-        public int Update(DTO_Book book)
+        public int Update(DTO_Author author)
         {
-            return 0;
+            string sql = "UPDATE Author SET author_name = '" + author.Author_name + "' WHERE author_id = '" + author.Author_id + "';";
+            return this.ExecuteNonQuery(sql);
         }
 
-        public int Delete(string b_id)
+        public int Delete(string author_id)
         {
-            return 0;
+            String sql = "DELETE Author WHERE author_id = " + author_id + ";";
+            return this.ExecuteNonQuery(sql);
         }
 
         public DataTable GetAllDataTable()
@@ -31,7 +34,7 @@ namespace DAO
 
         public DataTable GetDataTableBy(String condition, String value)
         {
-            return this.getTable("select * from AuThor where " + condition + " = '" + value + "'");
+            return this.getTable("select * from Author where " + condition + " = '" + value + "'");
         }
     }
 }
