@@ -80,8 +80,22 @@ namespace GUI
             cbPub.DataSource = dataTable;
             cbPub.DisplayMember = "publisher_name";
             cbPub.ValueMember = "publisher_id";
-        }
 
+            //Set field
+            setField();
+        }
+        
+        private void setField()
+        {
+            dgvBook.Columns["b_id"].HeaderText = "ID";
+            dgvBook.Columns["b_name"].HeaderText = "Name";
+            dgvBook.Columns["b_publication_date"].HeaderText = "Publication date";
+            dgvBook.Columns["b_price"].HeaderText = "Price";
+            dgvBook.Columns["b_quanity"].HeaderText = "Quanity";
+            dgvBook.Columns["category_id"].HeaderText = "Category ID";
+            dgvBook.Columns["author_id"].HeaderText = "Author ID";
+            dgvBook.Columns["publisher_id"].HeaderText = "Publisher ID";
+        }
 
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
