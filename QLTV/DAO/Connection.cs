@@ -9,30 +9,47 @@ namespace DAO
         SqlCommand command;
         SqlConnection connection;
 
-        public Connection(String con = "Data Source=DESKTOP-JLJ2TBG;Initial Catalog=QuanLyThuVien;Integrated Security=True")
+        public Connection(String con = "Data Source=.\\KPMSERVER;Initial Catalog=QuanLyThuVien;Integrated Security=True")
         {
             //Data Source=.\\KPMSERVER;Initial Catalog=QuanLyThuVien;Integrated Security=True
             connection = new SqlConnection(con);
         }
         public DataTable getTable(String sql)
         {
-            connection.Open();
-            DataTable dt = new DataTable();
-            dataAdapter = new SqlDataAdapter(sql, connection);
-            dataAdapter.Fill(dt);
-            connection.Close();
+            try
+            {
+                connection.Open();
+                DataTable dt = new DataTable();
+                dataAdapter = new SqlDataAdapter(sql, connection);
+                dataAdapter.Fill(dt);
+                connection.Close();
 
-            return dt;
+                return dt;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
         }
 
         public int ExecuteNonQuery(String sql)
         {
-            connection.Open();
-            command = new SqlCommand(sql, connection);
-           
-            int i=command.ExecuteNonQuery();
-            connection.Close();
-            return i;
+            try
+            {
+                connection.Open();
+                command = new SqlCommand(sql, connection);
+
+                int i = command.ExecuteNonQuery();
+                connection.Close();
+                return i;
+            }
+            catch (Exception)
+            {
+                return -1;
+            }
+
+
         }
     }
 }
