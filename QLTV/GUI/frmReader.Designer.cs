@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvStaff = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dgvReader = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gb1 = new System.Windows.Forms.GroupBox();
             this.btnE = new System.Windows.Forms.Button();
@@ -45,63 +45,63 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.txtPass = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReader)).BeginInit();
             this.gb1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvStaff
+            // dgvReader
             // 
-            this.dgvStaff.AllowUserToAddRows = false;
-            this.dgvStaff.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Tan;
-            this.dgvStaff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvStaff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvStaff.BackgroundColor = System.Drawing.Color.White;
-            this.dgvStaff.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvStaff.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.dgvStaff.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto Condensed Light", 10F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStaff.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgvStaff.EnableHeadersVisualStyles = false;
-            this.dgvStaff.GridColor = System.Drawing.Color.White;
-            this.dgvStaff.Location = new System.Drawing.Point(10, 368);
-            this.dgvStaff.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvStaff.MultiSelect = false;
-            this.dgvStaff.Name = "dgvStaff";
-            this.dgvStaff.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto Condensed Light", 10F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvStaff.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvStaff.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Tan;
-            this.dgvStaff.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStaff.ShowCellToolTips = false;
-            this.dgvStaff.ShowEditingIcon = false;
-            this.dgvStaff.Size = new System.Drawing.Size(777, 239);
-            this.dgvStaff.TabIndex = 1;
+            this.dgvReader.AllowUserToAddRows = false;
+            this.dgvReader.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Tan;
+            this.dgvReader.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvReader.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvReader.BackgroundColor = System.Drawing.Color.White;
+            this.dgvReader.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvReader.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dgvReader.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto Condensed Light", 10F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReader.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvReader.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReader.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgvReader.EnableHeadersVisualStyles = false;
+            this.dgvReader.GridColor = System.Drawing.Color.White;
+            this.dgvReader.Location = new System.Drawing.Point(10, 368);
+            this.dgvReader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvReader.MultiSelect = false;
+            this.dgvReader.Name = "dgvReader";
+            this.dgvReader.ReadOnly = true;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto Condensed Light", 10F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReader.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvReader.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvReader.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Tan;
+            this.dgvReader.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvReader.ShowCellToolTips = false;
+            this.dgvReader.ShowEditingIcon = false;
+            this.dgvReader.Size = new System.Drawing.Size(777, 239);
+            this.dgvReader.TabIndex = 1;
+            this.dgvReader.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReader_CellClick);
             // 
             // panel1
             // 
@@ -124,12 +124,11 @@
             this.gb1.Controls.Add(this.txtAddr);
             this.gb1.Controls.Add(this.label4);
             this.gb1.Controls.Add(this.label3);
+            this.gb1.Controls.Add(this.label2);
             this.gb1.Controls.Add(this.label6);
             this.gb1.Controls.Add(this.txtName);
-            this.gb1.Controls.Add(this.txtPass);
-            this.gb1.Controls.Add(this.txtPhone);
             this.gb1.Controls.Add(this.txtEmail);
-            this.gb1.Controls.Add(this.label2);
+            this.gb1.Controls.Add(this.txtPhone);
             this.gb1.Controls.Add(this.label5);
             this.gb1.Controls.Add(this.txtID);
             this.gb1.Controls.Add(this.label1);
@@ -142,7 +141,8 @@
             this.gb1.Size = new System.Drawing.Size(777, 282);
             this.gb1.TabIndex = 6;
             this.gb1.TabStop = false;
-            this.gb1.Text = "Thông tin nhân viên";
+            this.gb1.Text = "Thông tin người đọc";
+            this.gb1.Paint += new System.Windows.Forms.PaintEventHandler(this.gb1_Paint);
             // 
             // btnE
             // 
@@ -161,6 +161,7 @@
             this.btnE.TabIndex = 22;
             this.btnE.Text = "Thoát";
             this.btnE.UseVisualStyleBackColor = false;
+            this.btnE.Click += new System.EventHandler(this.btnE_Click);
             // 
             // btnSearch
             // 
@@ -195,6 +196,7 @@
             this.btnR.TabIndex = 23;
             this.btnR.Text = "Reset";
             this.btnR.UseVisualStyleBackColor = false;
+            this.btnR.Click += new System.EventHandler(this.btnR_Click);
             // 
             // btnD
             // 
@@ -212,6 +214,7 @@
             this.btnD.TabIndex = 24;
             this.btnD.Text = "Xóa";
             this.btnD.UseVisualStyleBackColor = false;
+            this.btnD.Click += new System.EventHandler(this.btnD_Click);
             // 
             // btnEdit
             // 
@@ -229,6 +232,7 @@
             this.btnEdit.TabIndex = 25;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnA
             // 
@@ -246,22 +250,23 @@
             this.btnA.TabIndex = 26;
             this.btnA.Text = "Thêm";
             this.btnA.UseVisualStyleBackColor = false;
+            this.btnA.Click += new System.EventHandler(this.btnA_Click);
             // 
             // txtAddr
             // 
-            this.txtAddr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAddr.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAddr.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.txtAddr.Location = new System.Drawing.Point(105, 128);
+            this.txtAddr.Location = new System.Drawing.Point(105, 98);
             this.txtAddr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddr.Name = "txtAddr";
-            this.txtAddr.Size = new System.Drawing.Size(245, 27);
+            this.txtAddr.Size = new System.Drawing.Size(245, 20);
             this.txtAddr.TabIndex = 14;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.label4.Location = new System.Drawing.Point(29, 130);
+            this.label4.Location = new System.Drawing.Point(29, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 19);
             this.label4.TabIndex = 6;
@@ -271,7 +276,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.label3.Location = new System.Drawing.Point(43, 100);
+            this.label3.Location = new System.Drawing.Point(43, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 19);
             this.label3.TabIndex = 8;
@@ -281,61 +286,31 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.label6.Location = new System.Drawing.Point(368, 70);
+            this.label6.Location = new System.Drawing.Point(368, 40);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 19);
+            this.label6.Size = new System.Drawing.Size(52, 19);
             this.label6.TabIndex = 9;
-            this.label6.Text = "Phone";
+            this.label6.Text = "Phone:";
             // 
             // txtName
             // 
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtName.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.txtName.Location = new System.Drawing.Point(105, 98);
+            this.txtName.Location = new System.Drawing.Point(105, 68);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(245, 27);
+            this.txtName.Size = new System.Drawing.Size(245, 20);
             this.txtName.TabIndex = 17;
-            // 
-            // txtPass
-            // 
-            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPass.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.txtPass.Location = new System.Drawing.Point(105, 68);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(245, 27);
-            this.txtPass.TabIndex = 17;
             // 
             // txtPhone
             // 
-            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhone.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.txtPhone.Location = new System.Drawing.Point(438, 68);
+            this.txtPhone.Location = new System.Drawing.Point(438, 38);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(299, 27);
+            this.txtPhone.Size = new System.Drawing.Size(299, 20);
             this.txtPhone.TabIndex = 18;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.txtEmail.Location = new System.Drawing.Point(438, 38);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(299, 27);
-            this.txtEmail.TabIndex = 18;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.label2.Location = new System.Drawing.Point(24, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 19);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Password:";
             // 
             // label5
             // 
@@ -349,20 +324,20 @@
             // 
             // txtID
             // 
-            this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtID.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
             this.txtID.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtID.Location = new System.Drawing.Point(105, 38);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(245, 27);
+            this.txtID.Size = new System.Drawing.Size(245, 20);
             this.txtID.TabIndex = 19;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.label1.Location = new System.Drawing.Point(43, 40);
+            this.label1.Location = new System.Drawing.Point(67, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 19);
             this.label1.TabIndex = 12;
@@ -376,9 +351,9 @@
             this.label9.Location = new System.Drawing.Point(228, 19);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(340, 57);
+            this.label9.Size = new System.Drawing.Size(345, 57);
             this.label9.TabIndex = 12;
-            this.label9.Text = "Quản lí nhân viên";
+            this.label9.Text = "Quản lí người đọc";
             // 
             // button1
             // 
@@ -390,6 +365,7 @@
             this.button1.TabIndex = 13;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -402,7 +378,27 @@
             this.button2.Text = "-";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // frmStaff
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.label2.Location = new System.Drawing.Point(369, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 19);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Email:";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.txtEmail.Location = new System.Drawing.Point(438, 66);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(299, 20);
+            this.txtEmail.TabIndex = 18;
+            // 
+            // frmReader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -415,14 +411,15 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.gb1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgvStaff);
+            this.Controls.Add(this.dgvReader);
             this.Font = new System.Drawing.Font("Roboto Condensed Light", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmStaff";
+            this.Name = "frmReader";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBook";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
+            this.Load += new System.EventHandler(this.frmReader_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReader)).EndInit();
             this.gb1.ResumeLayout(false);
             this.gb1.PerformLayout();
             this.ResumeLayout(false);
@@ -431,16 +428,14 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvStaff;
+        private System.Windows.Forms.DataGridView dgvReader;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox gb1;
         private System.Windows.Forms.TextBox txtAddr;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
@@ -452,8 +447,9 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnA;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtEmail;
     }
 }

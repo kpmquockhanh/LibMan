@@ -35,9 +35,9 @@ namespace BUS
 
         }
 
-        public int DeleteReader(DTO_Reader reader)
+        public int DeleteReader(string reader)
         {
-            return readerDAO.Delete(reader.ID.ToString());
+            return readerDAO.Delete(reader);
         }
     }
 }

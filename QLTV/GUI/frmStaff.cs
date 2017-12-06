@@ -34,7 +34,6 @@ namespace GUI
             staff = new BUS_Staff();
             dgvStaff.DataSource = staff.LoadDataGridViewStaff();
             setField();
-            dgvStaff.ColumnHeadersHeight = 30;
         }
 
         private void btnE_Click(object sender, EventArgs e)

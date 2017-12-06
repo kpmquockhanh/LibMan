@@ -19,7 +19,7 @@ namespace DAO
 
         public int Update(DTO_Reader reader)
         {
-            string sql = "UPDATE Reader SET r_id='" + reader.ID + "',r_name='" + reader.Name + "',r_address='" + reader.Addr + "',r_email='" + reader.Email + "',r_phone_number='" +reader.Phone + "'WHERE r_id = '" + reader.ID;
+            string sql = "UPDATE Reader SET r_id='" + reader.ID + "',r_name=N'" + reader.Name + "',r_address=N'" + reader.Addr + "',r_email='" + reader.Email + "',r_phone_number='" +reader.Phone + "'WHERE r_id = " + reader.ID;
             return this.ExecuteNonQuery(sql);
         }
 

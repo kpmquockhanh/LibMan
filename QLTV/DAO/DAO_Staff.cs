@@ -18,7 +18,7 @@ namespace DAO
 
         public int Update(DTO_Staff staff)
         {
-            string sql = "UPDATE Staff SET s_id='"+staff.ID+"',s_password='"+staff.Password+"',s_name='"+staff.Name+"',s_address='"+staff.Addr+"',s_email='"+staff.Email+"',s_phone_number='"+staff.Phone+ "'WHERE s_id = " + staff.ID;
+            string sql = "UPDATE Staff SET s_id='"+staff.ID+"',s_password='"+staff.Password+"',s_name=N'"+staff.Name+"',s_address=N'"+staff.Addr+"',s_email='"+staff.Email+"',s_phone_number='"+staff.Phone+ "'WHERE s_id = " + staff.ID;
             return this.ExecuteNonQuery(sql);
         }
 
