@@ -15,6 +15,7 @@ namespace GUI
     public partial class frmAuthor : Form
     {
         DataTable dataTable;
+        BUS_Book bus_book = new BUS_Book();
         String id;
         BUS_Author bus_author = new BUS_Author();
         public frmAuthor()
@@ -36,7 +37,7 @@ namespace GUI
 
         private void btnSeach_Click(object sender, EventArgs e)
         {
-            /*if (txtAuthorID.Text != "")
+            if (txtAuthorID.Text != "")
             {
                 DTO_Author dto_author = new DTO_Author();
                 String id = txtAuthorID.Text;
@@ -62,11 +63,14 @@ namespace GUI
             if (checkNull())
             {
                 DialogResult dlr = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin tác giả "
-                    + txtAuthorName.Text + "?", "Thông báo", MessageBoxButtons.YesNo,
+                    + txtAuthorName.Text + " và các sách của " + txtAuthorName.Text + "?", "Thông báo", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question);
                 if (DialogResult.Yes == dlr)
                 {
-                    if (bus_author.DeleteAuthor(txtAuthorID.Text) == 1)
+                    if ((bus_book.DeleteBookByAuthor(txtAuthorID.Text) == 1
+                         && bus_author.DeleteAuthor(txtAuthorID.Text) == 1)
+                         || (bus_book.DeleteBookByAuthor(txtAuthorID.Text) == 0
+                         && bus_author.DeleteAuthor(txtAuthorID.Text) == 1))
                     {
                         MessageBox.Show("Thành công");
                         frmAuthor_Load(sender, e);
@@ -159,7 +163,7 @@ namespace GUI
         {
             int i = e.RowIndex;
             try
-            {// lỗi này bạn tựu sửa ... sư
+            {
                 dgvAuthor.Rows[e.RowIndex].Selected = true;
                 txtAuthorID.Text = dgvAuthor.Rows[e.RowIndex].Cells[0].Value.ToString();
                 id = txtAuthorID.Text;
@@ -198,7 +202,12 @@ namespace GUI
         private void btnA_Click(object sender, EventArgs e)
         {
 
-        }*/
+        }
+        
+
+        private void frmAuthor_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

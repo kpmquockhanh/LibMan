@@ -19,7 +19,7 @@ namespace BUS
         }
 
 
-        public DataTable LoadDataGridViewBorrow()
+        public DataTable LoadDataGridViewCard()
         {
             return cardDAO.GetAllDataTable();
         }

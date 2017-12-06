@@ -65,7 +65,7 @@
             this.gb1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvBook
+            // dgvAuthor
             // 
             this.dgvAuthor.AllowUserToAddRows = false;
             this.dgvAuthor.AllowUserToDeleteRows = false;
@@ -90,7 +90,7 @@
             this.dgvAuthor.Location = new System.Drawing.Point(10, 368);
             this.dgvAuthor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvAuthor.MultiSelect = false;
-            this.dgvAuthor.Name = "dgvBook";
+            this.dgvAuthor.Name = "dgvAuthor";
             this.dgvAuthor.ReadOnly = true;
             this.dgvAuthor.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvAuthor.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Tan;
@@ -501,6 +501,7 @@
             this.Name = "frmAuthor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBook";
+            this.Load += new System.EventHandler(this.frmAuthor_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAuthor)).EndInit();
             this.gb1.ResumeLayout(false);
             this.gb1.PerformLayout();

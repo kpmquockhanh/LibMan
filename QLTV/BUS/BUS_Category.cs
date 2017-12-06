@@ -62,15 +62,11 @@ namespace BUS
 
         }
 
-        public int DeleteCategory(DTO_Category category)
+        public int DeleteCategory(string category_id)
         {
             try
             {
-                if (category.Category_name.Contains("'"))
-                {
-                    category.Category_name = checkString(category.Category_name);
-                }
-                return categoryDAO.Delete(category.Category_name);
+                return categoryDAO.Delete(category_id);
             }
             catch (Exception)
             {

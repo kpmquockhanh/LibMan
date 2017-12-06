@@ -11,21 +11,21 @@ namespace DAO
     {
         public int Insert(DTO_Publisher publisher)
         {
-            string sql = "INSERT INTO Publisher(publisher_name, publisher_address)"
-                + " VALUES('" + publisher.Publisher_name + "', '" + publisher.Publisher_address + "');";
+            string sql = "INSERT INTO Publisher(publisher_id, publisher_name, publisher_address)"
+                     +" VALUES('" + publisher.Publisher_id + "',N'" + publisher.Publisher_name + "',N'" + publisher.Publisher_address + "');";
             return this.ExecuteNonQuery(sql);
         }
 
         public int Update(DTO_Publisher publisher)
         {
-            string sql = "UPDATE Publisher SET publisher_name = '" + publisher.Publisher_name + "', publisher_address = '"
+            string sql = "UPDATE Publisher SET publisher_name = N'" + publisher.Publisher_name + "', publisher_address = N'"
                 + publisher.Publisher_address + "' WHERE publisher_id = '" + publisher.Publisher_id + "';";
             return this.ExecuteNonQuery(sql);
         }
 
         public int Delete(string publisher_id)
         {
-            String sql = "DELETE Publisher WHERE b_id = " + publisher_id + ";";
+            String sql = "DELETE Publisher WHERE publish_id = " + publisher_id + ";";
             return this.ExecuteNonQuery(sql);
         }
 

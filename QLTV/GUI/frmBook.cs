@@ -43,6 +43,12 @@ namespace GUI
                     MessageBox.Show("Thành công");
                     frmBook_Load(sender, e);
                 }
+                else if (bus_book.InsertBook(b) == -5)
+                {
+                    MessageBox.Show("Nhập mã sách bị trùng!");
+                    txtID.Text = "";
+                    txtID.Focus();
+                }
                 else
                     MessageBox.Show("Không thành công");
             }
@@ -64,27 +70,24 @@ namespace GUI
             dataTable = new DataTable();
             dataTable = bus_category.LoadDataGridViewCategory();
             cbCate.DataSource = dataTable;
-            cbCate.DisplayMember = "category_name";
-            cbCate.ValueMember = "category_id";
+            cbCate.DisplayMember = "category_id";
 
             // Load ComboxAuthor
             dataTable = new DataTable();
             dataTable = bus_author.LoadDataGridViewAuthor();
             cbAuthor.DataSource = dataTable;
-            cbAuthor.ValueMember = "author_id";
-            cbAuthor.DisplayMember = "author_name";
+            cbAuthor.DisplayMember = "author_id";
 
             // Load ComboxPublisher
             dataTable = new DataTable();
             dataTable = bus_publisher.LoadDataGridViewPublisher();
             cbPub.DataSource = dataTable;
-            cbPub.DisplayMember = "publisher_name";
-            cbPub.ValueMember = "publisher_id";
+            cbPub.DisplayMember = "publisher_id";
 
             //Set field
             setField();
         }
-        
+
         private void setField()
         {
             dgvBook.Columns["b_id"].HeaderText = "ID";
