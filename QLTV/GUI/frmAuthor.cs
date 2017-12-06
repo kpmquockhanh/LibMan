@@ -36,7 +36,7 @@ namespace GUI
 
         private void btnSeach_Click(object sender, EventArgs e)
         {
-            if (txtAuthorID.Text != "")
+            /*if (txtAuthorID.Text != "")
             {
                 DTO_Author dto_author = new DTO_Author();
                 String id = txtAuthorID.Text;
@@ -159,7 +159,7 @@ namespace GUI
         {
             int i = e.RowIndex;
             try
-            {
+            {// lỗi này bạn tựu sửa ... sư
                 dgvAuthor.Rows[e.RowIndex].Selected = true;
                 txtAuthorID.Text = dgvAuthor.Rows[e.RowIndex].Cells[0].Value.ToString();
                 id = txtAuthorID.Text;
@@ -198,6 +198,7 @@ namespace GUI
         private void btnA_Click(object sender, EventArgs e)
         {
 
+        }*/
         }
     }
 }
