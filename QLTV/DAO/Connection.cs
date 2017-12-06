@@ -36,20 +36,20 @@ namespace DAO
 
         public int ExecuteNonQuery(String sql)
         {
-            try
-            {
+            //try
+            //{
                 connection.Open();
                 command = new SqlCommand(sql, connection);
 
                 int i = command.ExecuteNonQuery();
                 connection.Close();
                 return i;
-            }
-            catch (Exception)
-            {
-                connection.Close();
-                return -1;
-            }
+            //}
+            //catch (Exception)
+            //{
+            //    connection.Close();
+            //    return -1;
+            //}
 
 
         }

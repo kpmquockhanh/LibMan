@@ -23,13 +23,13 @@ namespace GUI
 
         private void gb1_Paint(object sender, PaintEventArgs e)
         {
-            Pen p = new Pen(Color.FromArgb(26, 187, 155));
-            Graphics g = e.Graphics;
-            g.DrawRectangle(p, new Rectangle(new Point(txtID.Location.X - 3, txtID.Location.Y - 3), new Size(txtID.Width + 3, txtID.Height + 3)));
-            g.DrawRectangle(p, new Rectangle(new Point(txtName.Location.X - 3, txtName.Location.Y - 3), new Size(txtName.Width + 3, txtName.Height + 3)));
-            g.DrawRectangle(p, new Rectangle(new Point(txtPhone.Location.X - 3, txtPhone.Location.Y - 3), new Size(txtPhone.Width + 3, txtPhone.Height + 3)));
-            g.DrawRectangle(p, new Rectangle(new Point(txtAddr.Location.X - 3, txtAddr.Location.Y - 3), new Size(txtAddr.Width + 3, txtAddr.Height + 3)));
-            g.DrawRectangle(p, new Rectangle(new Point(txtEmail.Location.X - 3, txtEmail.Location.Y - 3), new Size(txtEmail.Width + 3, txtEmail.Height + 3)));
+            //Pen p = new Pen(Color.FromArgb(26, 187, 155));
+            //Graphics g = e.Graphics;
+            //g.DrawRectangle(p, new Rectangle(new Point(txtID.Location.X - 3, txtID.Location.Y - 3), new Size(txtID.Width + 3, txtID.Height + 3)));
+            //g.DrawRectangle(p, new Rectangle(new Point(txtName.Location.X - 3, txtName.Location.Y - 3), new Size(txtName.Width + 3, txtName.Height + 3)));
+            //g.DrawRectangle(p, new Rectangle(new Point(txtPhone.Location.X - 3, txtPhone.Location.Y - 3), new Size(txtPhone.Width + 3, txtPhone.Height + 3)));
+            //g.DrawRectangle(p, new Rectangle(new Point(txtAddr.Location.X - 3, txtAddr.Location.Y - 3), new Size(txtAddr.Width + 3, txtAddr.Height + 3)));
+            //g.DrawRectangle(p, new Rectangle(new Point(txtEmail.Location.X - 3, txtEmail.Location.Y - 3), new Size(txtEmail.Width + 3, txtEmail.Height + 3)));
         }
 
         private void setField()
@@ -167,6 +167,23 @@ namespace GUI
             else
             {
                 MessageBox.Show("Hãy nhập đủ thông tin");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (txtID.Text != "")
+            {
+                dgvReader.DataSource = readerBUS.SearchReader("r_id", txtID.Text);
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng điền ID để tìm kiếm");
             }
         }
     }

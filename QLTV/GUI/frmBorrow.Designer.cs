@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmStaff
+    partial class frmBorrow
     {
         /// <summary>
         /// Required designer variable.
@@ -31,17 +31,21 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvStaff = new System.Windows.Forms.DataGridView();
+            this.dgvBorrow = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gb1 = new System.Windows.Forms.GroupBox();
-            this.txtAddr = new System.Windows.Forms.TextBox();
+            this.btnE = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnR = new System.Windows.Forms.Button();
+            this.btnD = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnA = new System.Windows.Forms.Button();
+            this.txtQuanity = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtBID = new System.Windows.Forms.TextBox();
+            this.txtDeposit = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -49,27 +53,27 @@
             this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.btnE = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnR = new System.Windows.Forms.Button();
-            this.btnD = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnA = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSID = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtRID = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBorrow)).BeginInit();
             this.gb1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvStaff
+            // dgvBorrow
             // 
-            this.dgvStaff.AllowUserToAddRows = false;
-            this.dgvStaff.AllowUserToDeleteRows = false;
+            this.dgvBorrow.AllowUserToAddRows = false;
+            this.dgvBorrow.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Tan;
-            this.dgvStaff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvStaff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvStaff.BackgroundColor = System.Drawing.Color.White;
-            this.dgvStaff.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvStaff.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.dgvStaff.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvBorrow.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvBorrow.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBorrow.BackgroundColor = System.Drawing.Color.White;
+            this.dgvBorrow.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvBorrow.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dgvBorrow.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateGray;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Condensed Light", 10F);
@@ -77,16 +81,16 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStaff.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgvStaff.EnableHeadersVisualStyles = false;
-            this.dgvStaff.GridColor = System.Drawing.Color.White;
-            this.dgvStaff.Location = new System.Drawing.Point(10, 368);
-            this.dgvStaff.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvStaff.MultiSelect = false;
-            this.dgvStaff.Name = "dgvStaff";
-            this.dgvStaff.ReadOnly = true;
+            this.dgvBorrow.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvBorrow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBorrow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgvBorrow.EnableHeadersVisualStyles = false;
+            this.dgvBorrow.GridColor = System.Drawing.Color.White;
+            this.dgvBorrow.Location = new System.Drawing.Point(10, 368);
+            this.dgvBorrow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvBorrow.MultiSelect = false;
+            this.dgvBorrow.Name = "dgvBorrow";
+            this.dgvBorrow.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto Condensed Light", 10F);
@@ -94,15 +98,14 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvStaff.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvStaff.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            this.dgvStaff.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStaff.ShowCellToolTips = false;
-            this.dgvStaff.ShowEditingIcon = false;
-            this.dgvStaff.Size = new System.Drawing.Size(777, 239);
-            this.dgvStaff.TabIndex = 1;
-            this.dgvStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaff_CellClick);
+            this.dgvBorrow.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvBorrow.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvBorrow.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            this.dgvBorrow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvBorrow.ShowCellToolTips = false;
+            this.dgvBorrow.ShowEditingIcon = false;
+            this.dgvBorrow.Size = new System.Drawing.Size(777, 239);
+            this.dgvBorrow.TabIndex = 1;
             // 
             // panel1
             // 
@@ -116,20 +119,24 @@
             // 
             // gb1
             // 
+            this.gb1.Controls.Add(this.dateTimePicker2);
+            this.gb1.Controls.Add(this.dateTimePicker1);
             this.gb1.Controls.Add(this.btnE);
             this.gb1.Controls.Add(this.btnSearch);
             this.gb1.Controls.Add(this.btnR);
             this.gb1.Controls.Add(this.btnD);
             this.gb1.Controls.Add(this.btnEdit);
             this.gb1.Controls.Add(this.btnA);
-            this.gb1.Controls.Add(this.txtAddr);
+            this.gb1.Controls.Add(this.txtQuanity);
             this.gb1.Controls.Add(this.label4);
             this.gb1.Controls.Add(this.label3);
+            this.gb1.Controls.Add(this.txtRID);
+            this.gb1.Controls.Add(this.txtSID);
             this.gb1.Controls.Add(this.label6);
-            this.gb1.Controls.Add(this.txtName);
-            this.gb1.Controls.Add(this.txtPass);
-            this.gb1.Controls.Add(this.txtPhone);
-            this.gb1.Controls.Add(this.txtEmail);
+            this.gb1.Controls.Add(this.textBox2);
+            this.gb1.Controls.Add(this.textBox1);
+            this.gb1.Controls.Add(this.txtBID);
+            this.gb1.Controls.Add(this.txtDeposit);
             this.gb1.Controls.Add(this.label2);
             this.gb1.Controls.Add(this.label5);
             this.gb1.Controls.Add(this.txtID);
@@ -143,163 +150,7 @@
             this.gb1.Size = new System.Drawing.Size(777, 282);
             this.gb1.TabIndex = 6;
             this.gb1.TabStop = false;
-            this.gb1.Text = "Thông tin nhân viên";
-            // 
-            // txtAddr
-            // 
-            this.txtAddr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAddr.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.txtAddr.Location = new System.Drawing.Point(105, 128);
-            this.txtAddr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtAddr.Name = "txtAddr";
-            this.txtAddr.Size = new System.Drawing.Size(245, 27);
-            this.txtAddr.TabIndex = 14;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.label4.Location = new System.Drawing.Point(29, 130);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 19);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Address:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.label3.Location = new System.Drawing.Point(43, 100);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 19);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Name:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.label6.Location = new System.Drawing.Point(368, 70);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 19);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Phone";
-            // 
-            // txtName
-            // 
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtName.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.txtName.Location = new System.Drawing.Point(105, 98);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(245, 27);
-            this.txtName.TabIndex = 17;
-            // 
-            // txtPass
-            // 
-            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPass.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.txtPass.Location = new System.Drawing.Point(105, 68);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(245, 27);
-            this.txtPass.TabIndex = 17;
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPhone.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.txtPhone.Location = new System.Drawing.Point(438, 68);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(299, 27);
-            this.txtPhone.TabIndex = 18;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.txtEmail.Location = new System.Drawing.Point(438, 38);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(299, 27);
-            this.txtEmail.TabIndex = 18;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.label2.Location = new System.Drawing.Point(24, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 19);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Password:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.label5.Location = new System.Drawing.Point(375, 40);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 19);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Email:";
-            // 
-            // txtID
-            // 
-            this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtID.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.txtID.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtID.Location = new System.Drawing.Point(105, 38);
-            this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(245, 27);
-            this.txtID.TabIndex = 19;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
-            this.label1.Location = new System.Drawing.Point(43, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 19);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "ID:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Roboto Condensed Light", 35F);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label9.Location = new System.Drawing.Point(228, 19);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(340, 57);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Quản lí nhân viên";
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Tan;
-            this.button1.Location = new System.Drawing.Point(762, 11);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 25);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Tan;
-            this.button2.Location = new System.Drawing.Point(731, 11);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(25, 25);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = true;
+            this.gb1.Text = "Thông tin người mượn";
             // 
             // btnE
             // 
@@ -376,7 +227,6 @@
             this.btnD.TabIndex = 24;
             this.btnD.Text = "Xóa";
             this.btnD.UseVisualStyleBackColor = false;
-            this.btnD.Click += new System.EventHandler(this.btnD_Click);
             // 
             // btnEdit
             // 
@@ -395,7 +245,6 @@
             this.btnEdit.TabIndex = 25;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnA
             // 
@@ -414,9 +263,202 @@
             this.btnA.TabIndex = 26;
             this.btnA.Text = "Thêm";
             this.btnA.UseVisualStyleBackColor = false;
-            this.btnA.Click += new System.EventHandler(this.btnA_Click);
             // 
-            // frmStaff
+            // txtQuanity
+            // 
+            this.txtQuanity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtQuanity.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.txtQuanity.Location = new System.Drawing.Point(105, 128);
+            this.txtQuanity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtQuanity.Name = "txtQuanity";
+            this.txtQuanity.Size = new System.Drawing.Size(245, 27);
+            this.txtQuanity.TabIndex = 14;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.label4.Location = new System.Drawing.Point(37, 130);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 19);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Quanity:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.label3.Location = new System.Drawing.Point(11, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 19);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Return date:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.label6.Location = new System.Drawing.Point(373, 70);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 19);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Book ID:";
+            // 
+            // txtBID
+            // 
+            this.txtBID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBID.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.txtBID.Location = new System.Drawing.Point(438, 68);
+            this.txtBID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBID.Name = "txtBID";
+            this.txtBID.Size = new System.Drawing.Size(299, 27);
+            this.txtBID.TabIndex = 18;
+            // 
+            // txtDeposit
+            // 
+            this.txtDeposit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDeposit.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.txtDeposit.Location = new System.Drawing.Point(438, 38);
+            this.txtDeposit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDeposit.Name = "txtDeposit";
+            this.txtDeposit.Size = new System.Drawing.Size(299, 27);
+            this.txtDeposit.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.label2.Location = new System.Drawing.Point(24, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 19);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Take date:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.label5.Location = new System.Drawing.Point(375, 40);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 19);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Deposit:";
+            // 
+            // txtID
+            // 
+            this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtID.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.txtID.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtID.Location = new System.Drawing.Point(105, 38);
+            this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(245, 27);
+            this.txtID.TabIndex = 19;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.label1.Location = new System.Drawing.Point(72, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(25, 19);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "ID:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Roboto Condensed Light", 35F);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label9.Location = new System.Drawing.Point(207, 19);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(383, 57);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Quản lí người mượn";
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Tan;
+            this.button1.Location = new System.Drawing.Point(762, 11);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 25);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Tan;
+            this.button2.Location = new System.Drawing.Point(731, 11);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(25, 25);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "-";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.textBox1.Location = new System.Drawing.Point(438, 98);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(299, 27);
+            this.textBox1.TabIndex = 18;
+            // 
+            // txtSID
+            // 
+            this.txtSID.AutoSize = true;
+            this.txtSID.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.txtSID.Location = new System.Drawing.Point(374, 100);
+            this.txtSID.Name = "txtSID";
+            this.txtSID.Size = new System.Drawing.Size(60, 19);
+            this.txtSID.TabIndex = 9;
+            this.txtSID.Text = "Staff ID:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.textBox2.Location = new System.Drawing.Point(438, 128);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(299, 27);
+            this.textBox2.TabIndex = 18;
+            // 
+            // txtRID
+            // 
+            this.txtRID.AutoSize = true;
+            this.txtRID.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.txtRID.Location = new System.Drawing.Point(361, 130);
+            this.txtRID.Name = "txtRID";
+            this.txtRID.Size = new System.Drawing.Size(73, 19);
+            this.txtRID.TabIndex = 9;
+            this.txtRID.Text = "Reader ID:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(104, 70);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(172, 24);
+            this.dateTimePicker1.TabIndex = 27;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(105, 98);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(171, 24);
+            this.dateTimePicker2.TabIndex = 27;
+            // 
+            // frmBorrow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -428,15 +470,14 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.gb1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgvStaff);
+            this.Controls.Add(this.dgvBorrow);
             this.Font = new System.Drawing.Font("Roboto Condensed Light", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmStaff";
+            this.Name = "frmBorrow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBook";
-            this.Load += new System.EventHandler(this.frmStaff_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBorrow)).EndInit();
             this.gb1.ResumeLayout(false);
             this.gb1.PerformLayout();
             this.ResumeLayout(false);
@@ -445,22 +486,20 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvStaff;
+        private System.Windows.Forms.DataGridView dgvBorrow;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox gb1;
-        private System.Windows.Forms.TextBox txtAddr;
+        private System.Windows.Forms.TextBox txtQuanity;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtDeposit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtBID;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnE;
@@ -469,5 +508,11 @@
         private System.Windows.Forms.Button btnD;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnA;
+        private System.Windows.Forms.Label txtRID;
+        private System.Windows.Forms.Label txtSID;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

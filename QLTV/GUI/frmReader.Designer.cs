@@ -95,7 +95,7 @@
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvReader.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvReader.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvReader.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Tan;
+            this.dgvReader.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             this.dgvReader.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvReader.ShowCellToolTips = false;
             this.dgvReader.ShowEditingIcon = false;
@@ -153,7 +153,8 @@
             this.btnE.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(237)))), ((int)(((byte)(144)))));
             this.btnE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(237)))), ((int)(((byte)(144)))));
             this.btnE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnE.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.btnE.Font = new System.Drawing.Font("Roboto Condensed Light", 15F);
+            this.btnE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.btnE.Location = new System.Drawing.Point(640, 188);
             this.btnE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnE.Name = "btnE";
@@ -171,7 +172,8 @@
             this.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(237)))), ((int)(((byte)(144)))));
             this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(237)))), ((int)(((byte)(144)))));
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.btnSearch.Font = new System.Drawing.Font("Roboto Condensed Light", 15F);
+            this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.btnSearch.Location = new System.Drawing.Point(533, 188);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
@@ -179,6 +181,7 @@
             this.btnSearch.TabIndex = 22;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnR
             // 
@@ -188,7 +191,8 @@
             this.btnR.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(237)))), ((int)(((byte)(144)))));
             this.btnR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(237)))), ((int)(((byte)(144)))));
             this.btnR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnR.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.btnR.Font = new System.Drawing.Font("Roboto Condensed Light", 15F);
+            this.btnR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.btnR.Location = new System.Drawing.Point(429, 188);
             this.btnR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnR.Name = "btnR";
@@ -206,7 +210,8 @@
             this.btnD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(237)))), ((int)(((byte)(144)))));
             this.btnD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(237)))), ((int)(((byte)(144)))));
             this.btnD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnD.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.btnD.Font = new System.Drawing.Font("Roboto Condensed Light", 15F);
+            this.btnD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.btnD.Location = new System.Drawing.Point(325, 188);
             this.btnD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnD.Name = "btnD";
@@ -224,7 +229,8 @@
             this.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(237)))), ((int)(((byte)(144)))));
             this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(237)))), ((int)(((byte)(144)))));
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.btnEdit.Font = new System.Drawing.Font("Roboto Condensed Light", 15F);
+            this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.btnEdit.Location = new System.Drawing.Point(221, 188);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEdit.Name = "btnEdit";
@@ -242,7 +248,8 @@
             this.btnA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(237)))), ((int)(((byte)(144)))));
             this.btnA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(237)))), ((int)(((byte)(144)))));
             this.btnA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnA.Font = new System.Drawing.Font("Roboto Condensed Light", 12F);
+            this.btnA.Font = new System.Drawing.Font("Roboto Condensed Light", 15F);
+            this.btnA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.btnA.Location = new System.Drawing.Point(117, 188);
             this.btnA.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnA.Name = "btnA";
@@ -377,6 +384,7 @@
             this.button2.TabIndex = 13;
             this.button2.Text = "-";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
@@ -403,7 +411,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
             this.CancelButton = this.btnE;
             this.ClientSize = new System.Drawing.Size(799, 620);
             this.Controls.Add(this.button2);
