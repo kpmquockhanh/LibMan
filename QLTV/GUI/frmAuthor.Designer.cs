@@ -30,7 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvBook = new System.Windows.Forms.DataGridView();
+            this.dgvAuthor = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gb1 = new System.Windows.Forms.GroupBox();
             this.btnE = new System.Windows.Forms.Button();
@@ -61,21 +61,21 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAuthor)).BeginInit();
             this.gb1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvBook
             // 
-            this.dgvBook.AllowUserToAddRows = false;
-            this.dgvBook.AllowUserToDeleteRows = false;
+            this.dgvAuthor.AllowUserToAddRows = false;
+            this.dgvAuthor.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Tan;
-            this.dgvBook.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvBook.BackgroundColor = System.Drawing.Color.White;
-            this.dgvBook.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvBook.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.dgvBook.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvAuthor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAuthor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAuthor.BackgroundColor = System.Drawing.Color.White;
+            this.dgvAuthor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAuthor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dgvAuthor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -83,22 +83,22 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBook.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgvBook.GridColor = System.Drawing.Color.White;
-            this.dgvBook.Location = new System.Drawing.Point(10, 368);
-            this.dgvBook.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvBook.MultiSelect = false;
-            this.dgvBook.Name = "dgvBook";
-            this.dgvBook.ReadOnly = true;
-            this.dgvBook.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvBook.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Tan;
-            this.dgvBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBook.ShowCellToolTips = false;
-            this.dgvBook.ShowEditingIcon = false;
-            this.dgvBook.Size = new System.Drawing.Size(777, 239);
-            this.dgvBook.TabIndex = 1;
+            this.dgvAuthor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvAuthor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAuthor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgvAuthor.GridColor = System.Drawing.Color.White;
+            this.dgvAuthor.Location = new System.Drawing.Point(10, 368);
+            this.dgvAuthor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvAuthor.MultiSelect = false;
+            this.dgvAuthor.Name = "dgvBook";
+            this.dgvAuthor.ReadOnly = true;
+            this.dgvAuthor.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvAuthor.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Tan;
+            this.dgvAuthor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAuthor.ShowCellToolTips = false;
+            this.dgvAuthor.ShowEditingIcon = false;
+            this.dgvAuthor.Size = new System.Drawing.Size(777, 239);
+            this.dgvAuthor.TabIndex = 1;
             // 
             // panel1
             // 
@@ -230,7 +230,6 @@
             this.btnEdit.TabIndex = 25;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnA
             // 
@@ -248,7 +247,6 @@
             this.btnA.TabIndex = 26;
             this.btnA.Text = "Thêm";
             this.btnA.UseVisualStyleBackColor = false;
-            this.btnA.Click += new System.EventHandler(this.btnA_Click);
             // 
             // cbPub
             // 
@@ -441,7 +439,6 @@
             this.button2.TabIndex = 14;
             this.button2.Text = "-";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -497,14 +494,14 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.gb1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgvBook);
+            this.Controls.Add(this.dgvAuthor);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAuthor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBook";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAuthor)).EndInit();
             this.gb1.ResumeLayout(false);
             this.gb1.PerformLayout();
             this.ResumeLayout(false);
@@ -513,7 +510,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvBook;
+        private System.Windows.Forms.DataGridView dgvAuthor;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox gb1;
         private System.Windows.Forms.DateTimePicker dpPubDate;
